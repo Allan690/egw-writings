@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.*
+
+# Corpus is built on deploy (~130 MB); manifest.json is committed
+public/corpus/egw.sqlite
+public/corpus/egw.sqlite.gz
+
+# Generated at install/dev
+src/vendor/sql-wasm.mjs
+
+# Editor / OS
+.cursor
+.vscode
+*.log

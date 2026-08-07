@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run corpus:build && node scripts/gzip-corpus.mjs && npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "installCommand": "npm install"
+}
