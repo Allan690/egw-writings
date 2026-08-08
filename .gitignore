@@ -22,3 +22,7 @@ src/vendor/sql-wasm.mjs
 *.log
 .vercel
 tmp/
+
+# Playwright
+test-results
+playwright-report
