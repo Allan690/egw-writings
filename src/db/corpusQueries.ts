@@ -19,6 +19,9 @@ const PARA_JOINS = `
 
 type Row = Record<string, unknown>
 
+/** Values sqlite-wasm accepts as positional bindings. */
+type Bindable = string | number | null | Uint8Array
+
 export class CorpusDb {
   private readonly db: Database
   private readonly codec: TextCodec
@@ -44,7 +47,7 @@ export class CorpusDb {
     return new CorpusDb(db, codec, collection)
   }
 
-  private rows(sql: string, params: unknown[] = []): Row[] {
+  private rows(sql: string, params: Bindable[] = []): Row[] {
     return this.db.exec({
       sql,
       bind: params,
@@ -134,7 +137,7 @@ export class CorpusDb {
   }
 
   search(ftsQuery: string, rawQuery: string, limit: number, bookId?: string): SearchHit[] {
-    const params: unknown[] = [ftsQuery]
+    const params: Bindable[] = [ftsQuery]
     let filter = ''
     if (bookId) {
       filter = 'AND p.book_id = ?'
