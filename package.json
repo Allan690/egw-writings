@@ -6,10 +6,16 @@
   "scripts": {
     "postinstall": "node scripts/patch-sql-wasm.mjs",
     "dev": "node scripts/patch-sql-wasm.mjs && vite",
-    "corpus:build": "tsx scripts/build-corpus.ts",
+    "corpus:build:egw": "tsx scripts/build-corpus.ts",
+    "corpus:build:pioneers": "tsx scripts/build-pioneers-corpus.ts",
+    "corpus:build:pioneer": "npm run corpus:build:pioneers",
+    "corpus:build": "tsx scripts/build-corpus.ts && tsx scripts/build-pioneers-corpus.ts && node scripts/gzip-corpus.mjs",
+    "corpus:gzip": "node scripts/gzip-corpus.mjs",
     "build": "node scripts/patch-sql-wasm.mjs && tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "comlink": "^4.4.2",
@@ -27,11 +33,14 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "better-sqlite3": "^13.0.3",
+    "dotenv": "^17.4.2",
+    "fflate": "^0.8.3",
     "oxlint": "^1.75.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.11",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
-    "vite-plugin-pwa": "^1.3.0"
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^3.2.7"
   }
 }
