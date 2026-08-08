@@ -362,7 +362,7 @@ function ResultCard({
       // See CommandPalette: mousemove avoids a resting cursor hijacking the
       // keyboard cursor as results re-render beneath it.
       onMouseMove={onFocus}
-      className="group box-border w-full overflow-hidden rounded-[var(--r-md)] border bg-[var(--surface)] p-3.5 text-left transition-colors sm:grid sm:grid-cols-[6.5rem_1fr] sm:gap-3.5"
+      className="group box-border w-full overflow-hidden rounded-[var(--r-md)] border bg-[var(--surface)] p-3.5 text-left transition-colors sm:grid sm:grid-cols-[6.5rem_minmax(0,1fr)] sm:gap-3.5"
       style={{
         borderColor: active ? 'var(--accent)' : 'var(--border)',
         background: active ? 'var(--accent-soft)' : 'var(--surface)',

@@ -305,7 +305,7 @@ function ActionButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`flex w-full items-center gap-3 rounded-[var(--r-sm)] border border-[var(--border)] px-3 py-2.5 text-left transition-colors hover:border-[var(--border-strong)] disabled:opacity-50 ${className}`}
+      className={`flex w-full min-w-0 items-center gap-3 rounded-[var(--r-sm)] border border-[var(--border)] px-3 py-2.5 text-left transition-colors hover:border-[var(--border-strong)] disabled:opacity-50 ${className}`}
       style={{ color: danger ? 'var(--danger)' : 'var(--text)' }}
     >
       {icon}

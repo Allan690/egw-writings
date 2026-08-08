@@ -133,7 +133,10 @@ export function LibraryView({ books, onOpenBook, onOpenTarget, onOpenPalette }: 
                 key={item.bookId}
                 type="button"
                 onClick={() => void openBook(item.bookId)}
-                className="anim-rise flex items-center gap-3 rounded-[var(--r-md)] border border-[var(--border)] bg-[var(--surface)] p-3 text-left transition-colors hover:border-[var(--accent)]"
+                /* min-w-0: a grid item defaults to min-width:auto, so the
+                   truncated title's min-content width would push the card
+                   wider than the column and overflow the viewport. */
+                className="anim-rise flex min-w-0 items-center gap-3 rounded-[var(--r-md)] border border-[var(--border)] bg-[var(--surface)] p-3 text-left transition-colors hover:border-[var(--accent)]"
               >
                 <BookIcon code={item.code} size="sm" />
                 <div className="min-w-0 flex-1">
