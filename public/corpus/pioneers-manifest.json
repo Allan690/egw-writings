@@ -1,0 +1,5102 @@
+{
+  "version": 1,
+  "collection": "pioneer",
+  "builtAt": "2026-08-08T18:58:30.811Z",
+  "source": "EGW Writings API — Adventist Pioneer Library",
+  "bookCount": 636,
+  "paragraphCount": 534727,
+  "failedBooks": 0,
+  "dbPath": "/corpus/pioneers.sqlite",
+  "dbSizeMb": 483.8,
+  "paragraphIdOffset": 10000000,
+  "books": [
+    {
+      "id": "p-2006",
+      "apiBookId": 2006,
+      "code": "CHMP",
+      "title": "“Come Out of Her, My People”",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1994",
+      "apiBookId": 1994,
+      "code": "DPL",
+      "title": "“Due Process of Law” and The Divine Right of Dissent",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1385",
+      "apiBookId": 1385,
+      "code": "THD",
+      "title": "“The Daily”",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1260",
+      "apiBookId": 1260,
+      "code": "WWSJ",
+      "title": "“We Would See Jesus”",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1573",
+      "apiBookId": 1573,
+      "code": "WTYC",
+      "title": "“What Think Ye of Christ?”",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-972",
+      "apiBookId": 972,
+      "code": "BP1",
+      "title": "[Bates’ Pamphlet #1] The Opening Heavens",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-973",
+      "apiBookId": 973,
+      "code": "BP2",
+      "title": "[Bates’ Pamphlet #2] Second Advent Way Marks and High Heaps",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-974",
+      "apiBookId": 974,
+      "code": "BP3",
+      "title": "[Bates’ Pamphlet #3] An Explanation of the Typical and Anti-typical Sanctuary by the Scriptures",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1036",
+      "apiBookId": 1036,
+      "code": "SC1",
+      "title": "[Sabbath Controversy #1] The Seventh Day Sabbath, A Perpetual Sign",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1037",
+      "apiBookId": 1037,
+      "code": "SC2",
+      "title": "[Sabbath Controversy #2] The Seventh Day Sabbath, A Perpetual Sign (2nd Ed.)",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1038",
+      "apiBookId": 1038,
+      "code": "SC3",
+      "title": "[Sabbath Controversy #3] A Vindication of the Seventh-day Sabbath, and the Commandments of God",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1436",
+      "apiBookId": 1436,
+      "code": "LSDNW",
+      "title": "A Brief Account of the Last Sickness and Death of Nathaniel White",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1437",
+      "apiBookId": 1437,
+      "code": "BEARF",
+      "title": "A Brief Exposition of the Angels of Revelation XIV",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1438",
+      "apiBookId": 1438,
+      "code": "CCBC",
+      "title": "A Circular to the Citizens of Battle Creek, Relative to The Dime Tabernacle",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1264",
+      "apiBookId": 1264,
+      "code": "GRFA",
+      "title": "A Greek Falsehood",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1265",
+      "apiBookId": 1265,
+      "code": "LTSGJ",
+      "title": "A Lecture on the Typical Sabbaths and Great Jubilee",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1278",
+      "apiBookId": 1278,
+      "code": "QUAN",
+      "title": "A Question Answered",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-963",
+      "apiBookId": 963,
+      "code": "RCSK",
+      "title": "A Refutation of the Claims of Sunday-keeping to Divine Authority",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-967",
+      "apiBookId": 967,
+      "code": "RRCS",
+      "title": "A Review of the Remarks of O.R.L. Crozier on the Institution, Design and Abolition of the Sabbath",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-957",
+      "apiBookId": 957,
+      "code": "SLG",
+      "title": "A Seal of the Living God",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1444",
+      "apiBookId": 1444,
+      "code": "SoAp",
+      "title": "A Solemn Appeal",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1282",
+      "apiBookId": 1282,
+      "code": "S144",
+      "title": "A Study of the 144,000",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1283",
+      "apiBookId": 1283,
+      "code": "TSSD",
+      "title": "A Tract, Showing that the Seventh Day Should be Observed as the Sabbath, Instead of the First Day",
+      "author": "Thomas Motherwell Preble",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-971",
+      "apiBookId": 971,
+      "code": "WHT",
+      "title": "A Wonderful and Horrible Thing",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1285",
+      "apiBookId": 1285,
+      "code": "WFS",
+      "title": "A Word for The Sabbath",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1998",
+      "apiBookId": 1998,
+      "code": "AWLF",
+      "title": "A Word to the “Little Flock”",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1446",
+      "apiBookId": 1446,
+      "code": "WDUS",
+      "title": "A Written Discussion ... Upon the Sabbath",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1693",
+      "apiBookId": 1693,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 10",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1692",
+      "apiBookId": 1692,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 11",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1691",
+      "apiBookId": 1691,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 12",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1690",
+      "apiBookId": 1690,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 13",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1689",
+      "apiBookId": 1689,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 14",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1688",
+      "apiBookId": 1688,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 15",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1687",
+      "apiBookId": 1687,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 16",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1686",
+      "apiBookId": 1686,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 17",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1685",
+      "apiBookId": 1685,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 18",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1684",
+      "apiBookId": 1684,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 19",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1683",
+      "apiBookId": 1683,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 20",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1682",
+      "apiBookId": 1682,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 21",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1681",
+      "apiBookId": 1681,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 22",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1680",
+      "apiBookId": 1680,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 23",
+      "author": "Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1679",
+      "apiBookId": 1679,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 24",
+      "author": "Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1678",
+      "apiBookId": 1678,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 25",
+      "author": "Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1677",
+      "apiBookId": 1677,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 26",
+      "author": "Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1676",
+      "apiBookId": 1676,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 27",
+      "author": "Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1675",
+      "apiBookId": 1675,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 8",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1674",
+      "apiBookId": 1674,
+      "code": "ARSH",
+      "title": "Advent Review, and Sabbath Herald, vol. 9",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1279",
+      "apiBookId": 1279,
+      "code": "AMCR",
+      "title": "America’s Crisis",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1269",
+      "apiBookId": 1269,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 1",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1267",
+      "apiBookId": 1267,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 10",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1268",
+      "apiBookId": 1268,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 11",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1263",
+      "apiBookId": 1263,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 12",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1271",
+      "apiBookId": 1271,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1272",
+      "apiBookId": 1272,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1273",
+      "apiBookId": 1273,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 2",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1274",
+      "apiBookId": 1274,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 3",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1275",
+      "apiBookId": 1275,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 4",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1262",
+      "apiBookId": 1262,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 5",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1276",
+      "apiBookId": 1276,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 8",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1277",
+      "apiBookId": 1277,
+      "code": "AMS",
+      "title": "American Sentinel, vol. 9",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-958",
+      "apiBookId": 958,
+      "code": "APEC",
+      "title": "An Address to the Public, and Especially the Clergy",
+      "author": "Josiah Litch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1439",
+      "apiBookId": 1439,
+      "code": "AWMW",
+      "title": "An Appeal to the Working Men and Women in the Ranks of Seventh-day Adventists",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1280",
+      "apiBookId": 1280,
+      "code": "APYO",
+      "title": "An Appeal to the Youth",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1440",
+      "apiBookId": 1440,
+      "code": "EAAP",
+      "title": "An Earnest Appeal",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-960",
+      "apiBookId": 960,
+      "code": "ESRS",
+      "title": "An Examination of Seven Reasons for Sunday-Keeping",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-961",
+      "apiBookId": 961,
+      "code": "MPC",
+      "title": "An Examination of the Scripture Testimony",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-962",
+      "apiBookId": 962,
+      "code": "EMTF",
+      "title": "An Exposition of Matthew Twenty-Four on the Second Coming of Christ",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-959",
+      "apiBookId": 959,
+      "code": "ASC",
+      "title": "Analysis of Sacred Chronology",
+      "author": "Sylvester Bliss",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1441",
+      "apiBookId": 1441,
+      "code": "ATNM",
+      "title": "Angels: Their Nature and Ministry",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-964",
+      "apiBookId": 964,
+      "code": "AUSSC",
+      "title": "Appeal from the U. S. Supreme Court Decision Making this “A Christian Nation”",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1442",
+      "apiBookId": 1442,
+      "code": "APIM",
+      "title": "Appeal on Immortality",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-965",
+      "apiBookId": 965,
+      "code": "ATAP",
+      "title": "Are There Any Protestants?",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-966",
+      "apiBookId": 966,
+      "code": "ABSB",
+      "title": "Arguments on the Breckinridge Sunday Bill",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1443",
+      "apiBookId": 1443,
+      "code": "ARSR",
+      "title": "Ascension Robes; Slander Refuted",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1102",
+      "apiBookId": 1102,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 18",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1369",
+      "apiBookId": 1369,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 18",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1103",
+      "apiBookId": 1103,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 19",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1370",
+      "apiBookId": 1370,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 19",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1104",
+      "apiBookId": 1104,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 20",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1105",
+      "apiBookId": 1105,
+      "code": "BEST",
+      "title": "Australasian Signs of the Times, vol. 21",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-970",
+      "apiBookId": 970,
+      "code": "ASHL",
+      "title": "Australian Sentinel & Herald of Liberty, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1284",
+      "apiBookId": 1284,
+      "code": "BASI",
+      "title": "Baptism: Its Significance",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1447",
+      "apiBookId": 1447,
+      "code": "BIAD",
+      "title": "Bible Adventism",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1101",
+      "apiBookId": 1101,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1106",
+      "apiBookId": 1106,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1371",
+      "apiBookId": 1371,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 2",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1107",
+      "apiBookId": 1107,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1373",
+      "apiBookId": 1373,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 3",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1108",
+      "apiBookId": 1108,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1374",
+      "apiBookId": 1374,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 4",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1109",
+      "apiBookId": 1109,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1375",
+      "apiBookId": 1375,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 5",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1110",
+      "apiBookId": 1110,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 6",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1376",
+      "apiBookId": 1376,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 6",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1111",
+      "apiBookId": 1111,
+      "code": "BEST",
+      "title": "Bible Echo and Signs of the Times, vol. 7",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-978",
+      "apiBookId": 978,
+      "code": "BHB",
+      "title": "Bible Handbook",
+      "author": "Stephen Nelson Haskell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1448",
+      "apiBookId": 1448,
+      "code": "BHY",
+      "title": "Bible Hygiene",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-975",
+      "apiBookId": 975,
+      "code": "BQACM",
+      "title": "Bible Questions and Answers Concerning Man",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1286",
+      "apiBookId": 1286,
+      "code": "BRHC99",
+      "title": "Bible Readings for the Home Circle [Portion]",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1287",
+      "apiBookId": 1287,
+      "code": "BSA",
+      "title": "Bible Student’s Assistant",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-2780",
+      "apiBookId": 2780,
+      "code": "BTS",
+      "title": "Bible Training School, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-969",
+      "apiBookId": 969,
+      "code": "BOS",
+      "title": "Both Sides",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1270",
+      "apiBookId": 1270,
+      "code": "BSSL",
+      "title": "Both Sides on the Sabbath and Law",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1288",
+      "apiBookId": 1288,
+      "code": "BMDN",
+      "title": "Brother Miller’s Dream",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1449",
+      "apiBookId": 1449,
+      "code": "BMD",
+      "title": "Brother Miller’s Dream",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1289",
+      "apiBookId": 1289,
+      "code": "CWKS",
+      "title": "Can We Keep the Sabbath?",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1290",
+      "apiBookId": 1290,
+      "code": "CHR",
+      "title": "Christ and His Righteousness",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-981",
+      "apiBookId": 981,
+      "code": "CAP",
+      "title": "Christ and the Pharisees",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1291",
+      "apiBookId": 1291,
+      "code": "CAS",
+      "title": "Christ and the Sabbath",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1450",
+      "apiBookId": 1450,
+      "code": "COTSN",
+      "title": "Christ in the Old Testament, and the Sabbath in the New",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-983",
+      "apiBookId": 983,
+      "code": "COR",
+      "title": "Christ Our Righteousness",
+      "author": "Arthur Grosvenor Daniells",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-982",
+      "apiBookId": 982,
+      "code": "CHPA",
+      "title": "Christian Patriotism",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-984",
+      "apiBookId": 984,
+      "code": "CGRAS",
+      "title": "Civil Government and Religion",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-985",
+      "apiBookId": 985,
+      "code": "CGRSL",
+      "title": "Civil Government and Religion",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-987",
+      "apiBookId": 987,
+      "code": "CGRRLL",
+      "title": "Civil Government and Religion",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1293",
+      "apiBookId": 1293,
+      "code": "CGD",
+      "title": "Civil Government and the Decalogue",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1281",
+      "apiBookId": 1281,
+      "code": "CSH",
+      "title": "Civil Sunday Holiday",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-986",
+      "apiBookId": 986,
+      "code": "COL2",
+      "title": "Colossians II, 14-17",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-989",
+      "apiBookId": 989,
+      "code": "CADI",
+      "title": "Conference Address: Decatur, Illinois",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-979",
+      "apiBookId": 979,
+      "code": "CAOI",
+      "title": "Conference Address: Ottowa, Illinois",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-990",
+      "apiBookId": 990,
+      "code": "Consist",
+      "title": "Consistency",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-12861",
+      "apiBookId": 12861,
+      "code": "DAR",
+      "title": "Daniel and The Revelation",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1297",
+      "apiBookId": 1297,
+      "code": "DAR1909",
+      "title": "Daniel and The Revelation",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1294",
+      "apiBookId": 1294,
+      "code": "DCRC",
+      "title": "Day of the Crucifixion and Resurrection of Christ",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1451",
+      "apiBookId": 1451,
+      "code": "DEBU",
+      "title": "Death and Burial",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-991",
+      "apiBookId": 991,
+      "code": "DBC",
+      "title": "Departing and Being with Christ",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-992",
+      "apiBookId": 992,
+      "code": "DSQ63",
+      "title": "Discussion on the Sabbath Question",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1452",
+      "apiBookId": 1452,
+      "code": "DSQ69",
+      "title": "Discussion on the Sabbath Question",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1295",
+      "apiBookId": 1295,
+      "code": "DTIS",
+      "title": "Dissertations on the True Inheritance of the Saints",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-988",
+      "apiBookId": 988,
+      "code": "ECE",
+      "title": "Ecclesiastical Empire",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1296",
+      "apiBookId": 1296,
+      "code": "ESH",
+      "title": "Evidences from Scripture and History of the Second Coming of Christ About the Year A. D. 1843, and of His Personal Reign of 1000 Years",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1632",
+      "apiBookId": 1632,
+      "code": "FT",
+      "title": "Facts for the Times",
+      "author": "Merritt E. Cornell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1292",
+      "apiBookId": 1292,
+      "code": "FACC",
+      "title": "Fathers of the Catholic Church",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-11270",
+      "apiBookId": 11270,
+      "code": "FF",
+      "title": "Footprints of Faith ",
+      "author": "David Paulson",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1298",
+      "apiBookId": 1298,
+      "code": "FOFO",
+      "title": "Foreknowledge and Foreordination",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1453",
+      "apiBookId": 1453,
+      "code": "FEE",
+      "title": "From Eden to Eden",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1299",
+      "apiBookId": 1299,
+      "code": "FPSDA",
+      "title": "Fundamental Principles of Seventh-day Adventists",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-996",
+      "apiBookId": 996,
+      "code": "GCB/GCDB",
+      "title": "General Conference Bulletin Articles",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1302",
+      "apiBookId": 1302,
+      "code": "GCB/GCDB",
+      "title": "General Conference Bulletin Articles",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-998",
+      "apiBookId": 998,
+      "code": "GCB/GCDB",
+      "title": "General Conference Bulletin, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1673",
+      "apiBookId": 1673,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 1",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1672",
+      "apiBookId": 1672,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 2",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1671",
+      "apiBookId": 1671,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 3",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-999",
+      "apiBookId": 999,
+      "code": "GCB/GCDB",
+      "title": "General Conference Bulletin, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1306",
+      "apiBookId": 1306,
+      "code": "GCDB",
+      "title": "General Conference Bulletin, vol. 4",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1670",
+      "apiBookId": 1670,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 4",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1000",
+      "apiBookId": 1000,
+      "code": "GCB/GCDB",
+      "title": "General Conference Bulletin, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1307",
+      "apiBookId": 1307,
+      "code": "GCDB",
+      "title": "General Conference Bulletin, vol. 5",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1669",
+      "apiBookId": 1669,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 5",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1668",
+      "apiBookId": 1668,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 6",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1667",
+      "apiBookId": 1667,
+      "code": "GCB",
+      "title": "General Conference Bulletin, vol. 7",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1665",
+      "apiBookId": 1665,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1304",
+      "apiBookId": 1304,
+      "code": "GCB/GCDB",
+      "title": "General Conference Daily Bulletin, vol. 1",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1666",
+      "apiBookId": 1666,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 1",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1664",
+      "apiBookId": 1664,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 2",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1303",
+      "apiBookId": 1303,
+      "code": "GCB/GCDB",
+      "title": "General Conference Daily Bulletin, vol. 3",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1663",
+      "apiBookId": 1663,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 3",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1662",
+      "apiBookId": 1662,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 4",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1002",
+      "apiBookId": 1002,
+      "code": "GCB/GCDB",
+      "title": "General Conference Daily Bulletin, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1661",
+      "apiBookId": 1661,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 5",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1308",
+      "apiBookId": 1308,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 8",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1660",
+      "apiBookId": 1660,
+      "code": "GCDB",
+      "title": "General Conference Daily Bulletin, vol. 8",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1454",
+      "apiBookId": 1454,
+      "code": "GOME",
+      "title": "God’s Memorial",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1631",
+      "apiBookId": 1631,
+      "code": "HBH",
+      "title": "Hand Book of Health",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1455",
+      "apiBookId": 1455,
+      "code": "HHTL",
+      "title": "Health, or, How to Live",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1630",
+      "apiBookId": 1630,
+      "code": "HEVI",
+      "title": "Heavenly Visions",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1003",
+      "apiBookId": 1003,
+      "code": "HOB",
+      "title": "Herald of the Bridegroom",
+      "author": "Apollos Hale",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1311",
+      "apiBookId": 1311,
+      "code": "HHMLD",
+      "title": "Here and Hereafter",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1456",
+      "apiBookId": 1456,
+      "code": "HDM",
+      "title": "History and Doctrine of the Millennium",
+      "author": "Henry Dana Ward",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1008",
+      "apiBookId": 1008,
+      "code": "HSFD",
+      "title": "History of the Sabbath and First Day of the Week",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1309",
+      "apiBookId": 1309,
+      "code": "HHHH",
+      "title": "Home Here, and Home in Heaven; With Other Poems",
+      "author": "Annie Rebekah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1457",
+      "apiBookId": 1457,
+      "code": "HTGK",
+      "title": "How to Get Knowledge",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1310",
+      "apiBookId": 1310,
+      "code": "IMBG",
+      "title": "In Memoriam [Bourdeau]",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1300",
+      "apiBookId": 1300,
+      "code": "IMJW",
+      "title": "In Memoriam [White]",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1312",
+      "apiBookId": 1312,
+      "code": "SCSNT",
+      "title": "Is Sunday Called the Sabbath in the New Testament?",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1005",
+      "apiBookId": 1005,
+      "code": "STSG",
+      "title": "Is Sunday the True Sabbath of God?",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1006",
+      "apiBookId": 1006,
+      "code": "JUO",
+      "title": "Judaism Overthrown",
+      "author": "Josiah Litch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1007",
+      "apiBookId": 1007,
+      "code": "JRLE",
+      "title": "Judicial Religious Legislation Exposed",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1458",
+      "apiBookId": 1458,
+      "code": "JBF",
+      "title": "Justification by Faith",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-995",
+      "apiBookId": 995,
+      "code": "KCMS",
+      "title": "Kansas Campmeeting Sermons",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1313",
+      "apiBookId": 1313,
+      "code": "KSDPR",
+      "title": "Key to Smith’s Diagram and Parliamentary Rules",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1314",
+      "apiBookId": 1314,
+      "code": "KPC",
+      "title": "Key to the Prophetic Chart",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1316",
+      "apiBookId": 1316,
+      "code": "LDT",
+      "title": "Last Day Tokens",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-14083",
+      "apiBookId": 14083,
+      "code": "Ldrshp",
+      "title": "Leadership",
+      "author": "George Ide Butler",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-11194",
+      "apiBookId": 11194,
+      "code": "LOF_ATJ",
+      "title": "Lessons on Faith",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1628",
+      "apiBookId": 1628,
+      "code": "LOF_EJW",
+      "title": "Lessons on Faith",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1460",
+      "apiBookId": 1460,
+      "code": "LESP",
+      "title": "Letter and Spirit",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1012",
+      "apiBookId": 1012,
+      "code": "LBH",
+      "title": "Letter to Brother Himes",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1315",
+      "apiBookId": 1315,
+      "code": "LJHCS",
+      "title": "Letter to Joshua V. Himes, on the Cleansing of the Sanctuary",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1013",
+      "apiBookId": 1013,
+      "code": "LJL",
+      "title": "Letter to Rev. J. Litch, on the Second Coming of Christ",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1014",
+      "apiBookId": 1014,
+      "code": "LPN",
+      "title": "Letter to the Presbytery of Newark",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1011",
+      "apiBookId": 1011,
+      "code": "LCFMC",
+      "title": "Letters by Charles Fitch From The Midnight Cry, March 14, 1844",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1462",
+      "apiBookId": 1462,
+      "code": "LIFIN",
+      "title": "Life Incidents",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1463",
+      "apiBookId": 1463,
+      "code": "LIFSK",
+      "title": "Life Sketches",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1464",
+      "apiBookId": 1464,
+      "code": "LBFCG",
+      "title": "Living by Faith",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1317",
+      "apiBookId": 1317,
+      "code": "LUJ",
+      "title": "Looking Unto Jesus",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1318",
+      "apiBookId": 1318,
+      "code": "MND",
+      "title": "Man’s Nature and Destiny",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1015",
+      "apiBookId": 1015,
+      "code": "MBSG",
+      "title": "Mark of the Beast, And Seal of The Living God",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1009",
+      "apiBookId": 1009,
+      "code": "MWM",
+      "title": "Memoirs of William Miller",
+      "author": "Sylvester Bliss",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1319",
+      "apiBookId": 1319,
+      "code": "MRSH",
+      "title": "Miller’s Reply to Stuart’s “Hints on the Interpretation of Prophecy”",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1320",
+      "apiBookId": 1320,
+      "code": "MWV1",
+      "title": "Miller’s Works, vol. 1. Views of the Prophecies and Prophetic Chronology",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1321",
+      "apiBookId": 1321,
+      "code": "MWV2",
+      "title": "Miller’s Works, vol. 2. Evidence from Scripture and History of the Second Coming of Christ about the Year",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1322",
+      "apiBookId": 1322,
+      "code": "MWSV2",
+      "title": "Miller’s Works, vol. 2. Supplement",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-2007",
+      "apiBookId": 2007,
+      "code": "MWV3",
+      "title": "Miller’s Works, vol. 3. Exposition of the Twenty-Fourth Of Matthew; The True Inheritance Of The Saints; The Cleansing of the Sanctuary; The Ty",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1323",
+      "apiBookId": 1323,
+      "code": "MML",
+      "title": "Miracles in My Life",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1016",
+      "apiBookId": 1016,
+      "code": "MIRP",
+      "title": "Miraculous Powers",
+      "author": "Merritt E. Cornell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1324",
+      "apiBookId": 1324,
+      "code": "MOSP",
+      "title": "Modern Spiritualism",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1301",
+      "apiBookId": 1301,
+      "code": "MOI",
+      "title": "Mortal or Immortal? Which?",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1465",
+      "apiBookId": 1465,
+      "code": "MLDC",
+      "title": "My Lord Delayeth His Coming",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1017",
+      "apiBookId": 1017,
+      "code": "NRA",
+      "title": "National Reform an Absurdity",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1018",
+      "apiBookId": 1018,
+      "code": "NRRC",
+      "title": "National Reform and the Rights of Conscience",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1021",
+      "apiBookId": 1021,
+      "code": "NRCSB",
+      "title": "National Reform is Church and State [BSL]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1022",
+      "apiBookId": 1022,
+      "code": "NRCSS",
+      "title": "National Reform is Church and State [SL]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1466",
+      "apiBookId": 1466,
+      "code": "NRSRP",
+      "title": "National Reform Success Means Religious Persecution",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1019",
+      "apiBookId": 1019,
+      "code": "NRP",
+      "title": "National Reformed Presbyterianism",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1020",
+      "apiBookId": 1020,
+      "code": "OMP",
+      "title": "One-Man Power",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1467",
+      "apiBookId": 1467,
+      "code": "ONIN",
+      "title": "Origin, Nature, and Influence of Neology",
+      "author": "Nathan(iel) N. Whiting",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1468",
+      "apiBookId": 1468,
+      "code": "OFAH",
+      "title": "Our Faith and Hope",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1469",
+      "apiBookId": 1469,
+      "code": "OFH1",
+      "title": "Our Faith and Hope, No. 1",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1025",
+      "apiBookId": 1025,
+      "code": "PUR",
+      "title": "Pacific Union Recorder, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1026",
+      "apiBookId": 1026,
+      "code": "PUR",
+      "title": "Pacific Union Recorder, vol. 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1027",
+      "apiBookId": 1027,
+      "code": "PUR",
+      "title": "Pacific Union Recorder, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1325",
+      "apiBookId": 1325,
+      "code": "PTV",
+      "title": "Parable of the Ten Virgins",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1028",
+      "apiBookId": 1028,
+      "code": "RJSB",
+      "title": "Partial Report of Hearing on Johnston Sunday Bill, S. 404",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1470",
+      "apiBookId": 1470,
+      "code": "PSG",
+      "title": "Perpetuity of Spiritual Gifts",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1471",
+      "apiBookId": 1471,
+      "code": "PERGO",
+      "title": "Personality of God",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1327",
+      "apiBookId": 1327,
+      "code": "POUS",
+      "title": "Poems, by Uriah Smith",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1328",
+      "apiBookId": 1328,
+      "code": "PSAS",
+      "title": "Poems: With a Sketch of the Life and Experience of Annie R. Smith",
+      "author": "Rebekah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1472",
+      "apiBookId": 1472,
+      "code": "POI",
+      "title": "Positive Institutions",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1473",
+      "apiBookId": 1473,
+      "code": "PRWO",
+      "title": "Preach the Word",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1029",
+      "apiBookId": 1029,
+      "code": "PREX1",
+      "title": "Prophetic Expositions, vol. 1",
+      "author": "Josiah Litch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1030",
+      "apiBookId": 1030,
+      "code": "PREX2",
+      "title": "Prophetic Expositions, vol. 2",
+      "author": "Josiah Litch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1474",
+      "apiBookId": 1474,
+      "code": "PROLI",
+      "title": "Prophetic Lights",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1475",
+      "apiBookId": 1475,
+      "code": "PNR",
+      "title": "Purity of National Religion",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1331",
+      "apiBookId": 1331,
+      "code": "QSM",
+      "title": "Questions on the Sealing Message",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1031",
+      "apiBookId": 1031,
+      "code": "RFOS",
+      "title": "Refutation of Forty-Four So-Called Objections Against the Ancient Sabbath",
+      "author": "Daniel T. Bourdeau",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1476",
+      "apiBookId": 1476,
+      "code": "RDAC",
+      "title": "Refutation of the Doctrine Called The Age to Come",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1032",
+      "apiBookId": 1032,
+      "code": "RPS",
+      "title": "Religion and the Public Schools",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1329",
+      "apiBookId": 1329,
+      "code": "RESO",
+      "title": "Religious Societies",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1335",
+      "apiBookId": 1335,
+      "code": "RRTSE",
+      "title": "Remarks on Revelations Thirteenth, Seventeenth and Eighteenth",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1034",
+      "apiBookId": 1034,
+      "code": "RCASDA",
+      "title": "Replies to Elder Canright’s Attacks on Seventh-day Adventists",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1333",
+      "apiBookId": 1333,
+      "code": "RECA",
+      "title": "Replies to Elder Canright’s Attacks on Seventh-day Adventists",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1477",
+      "apiBookId": 1477,
+      "code": "RBF",
+      "title": "Report of the Book Fund for Tract and Book Distribution",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1035",
+      "apiBookId": 1035,
+      "code": "RCAAS",
+      "title": "Rev. W. F. Crafts Against the Editors of the American Sentinel",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1626",
+      "apiBookId": 1626,
+      "code": "RCAEAS",
+      "title": "Rev. W. F. Crafts Against the Editors of the American Sentinel",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1334",
+      "apiBookId": 1334,
+      "code": "RDDD",
+      "title": "Review of a Discourse, Delivered in the North Church, Newburyport, on the Last Evening of the Year 1841, by L. F. Dimmick, Pastor of the Church",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1478",
+      "apiBookId": 1478,
+      "code": "SDSQ",
+      "title": "Review of a Series of Discourses ... on the Sabbath Question",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1033",
+      "apiBookId": 1033,
+      "code": "ROSS",
+      "title": "Review of Objections to the Seventh-day Sabbath",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1479",
+      "apiBookId": 1479,
+      "code": "RTSB",
+      "title": "Review of the Two Sermons of Rev. R. G. Baird on the “Christian Sabbath”",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1336",
+      "apiBookId": 1336,
+      "code": "SCAM",
+      "title": "Sabbath Controversy in Allegan, Mich.",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1624",
+      "apiBookId": 1624,
+      "code": "GBJ",
+      "title": "Sabbath School Lessons",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1337",
+      "apiBookId": 1337,
+      "code": "SBTON",
+      "title": "Sabbaton",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1481",
+      "apiBookId": 1481,
+      "code": "SAJC",
+      "title": "Salvation in Jesus Christ",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1039",
+      "apiBookId": 1039,
+      "code": "SWE",
+      "title": "Samuel and the Witch of Endor",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1024",
+      "apiBookId": 1024,
+      "code": "SLH",
+      "title": "Sanctification",
+      "author": "Daniel T. Bourdeau",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1659",
+      "apiBookId": 1659,
+      "code": "ARSH",
+      "title": "Second Advent Review, and Sabbath Herald, vol. 1",
+      "author": "Second Advent Review, and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1040",
+      "apiBookId": 1040,
+      "code": "SOTC",
+      "title": "Sermon on the Two Covenants",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1045",
+      "apiBookId": 1045,
+      "code": "SOSL",
+      "title": "Sermons on the Sabbath and the Law",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1330",
+      "apiBookId": 1330,
+      "code": "SDAWK",
+      "title": "Seventh-day Adventists and Their Work",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1042",
+      "apiBookId": 1042,
+      "code": "RTPS",
+      "title": "Shall Religion Be Taught in the Public Schools?",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1653",
+      "apiBookId": 1653,
+      "code": "HST",
+      "title": "Signs of the Times [Himes], vol. 1",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1658",
+      "apiBookId": 1658,
+      "code": "HST",
+      "title": "Signs of the Times and Expositor of Prophecy [Himes], vol. 2",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1657",
+      "apiBookId": 1657,
+      "code": "HST",
+      "title": "Signs of the Times and Expositor of Prophecy [Himes], vol. 3",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1656",
+      "apiBookId": 1656,
+      "code": "HST",
+      "title": "Signs of the Times and Expositor of Prophecy [Himes], vol. 4",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1655",
+      "apiBookId": 1655,
+      "code": "HST",
+      "title": "Signs of the Times and Expositor of Prophecy [Himes], vol. 5",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1654",
+      "apiBookId": 1654,
+      "code": "HST",
+      "title": "Signs of the Times and Expositor of Prophecy [Himes], vol. 6",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1341",
+      "apiBookId": 1341,
+      "code": "SSII",
+      "title": "Six Sermons on the Inquiry Is There Immortality in Sin and Suffering?",
+      "author": "George Storrs",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1482",
+      "apiBookId": 1482,
+      "code": "SLWM",
+      "title": "Sketches of the Christian Life and Public Labors of William Miller",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1483",
+      "apiBookId": 1483,
+      "code": "SFCC",
+      "title": "Small Fruits",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1046",
+      "apiBookId": 1046,
+      "code": "SGC",
+      "title": "Spiritual Gifts",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1340",
+      "apiBookId": 1340,
+      "code": "SGL",
+      "title": "Spiritual Gifts",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1650",
+      "apiBookId": 1650,
+      "code": "GCBIntro",
+      "title": "Summary of Bulletins Published",
+      "author": "General Conference of SDA",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1342",
+      "apiBookId": 1342,
+      "code": "SUGR",
+      "title": "Sunday in the Greek",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1622",
+      "apiBookId": 1622,
+      "code": "SLOC",
+      "title": "Sunday Legislation",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1484",
+      "apiBookId": 1484,
+      "code": "SOOCC",
+      "title": "Sunday: The Origin of its Observance in the Christian Church",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1345",
+      "apiBookId": 1345,
+      "code": "SYNPT",
+      "title": "Synopsis of the Present Truth",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1047",
+      "apiBookId": 1047,
+      "code": "ASLD",
+      "title": "The “Abiding Sabbath” and the “Lord’s Day”",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1382",
+      "apiBookId": 1382,
+      "code": "CDFW",
+      "title": "The “Christian” Demand for War",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1343",
+      "apiBookId": 1343,
+      "code": "TTHDS",
+      "title": "The 2300 Days and the Sanctuary",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1652",
+      "apiBookId": 1652,
+      "code": "HST",
+      "title": "The Advent Herald, and Signs of the Times Reporter [Himes], vol. 7",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1648",
+      "apiBookId": 1648,
+      "code": "HST",
+      "title": "The Advent Herald, and Signs of the Times Reporter [Himes], vol. 8",
+      "author": "Signs of the Times [J.V. Himes]",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1647",
+      "apiBookId": 1647,
+      "code": "ADMI",
+      "title": "The Advent Mirror, vol. 1, no. 1",
+      "author": "The Advent Mirror",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1049",
+      "apiBookId": 1049,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 54",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1051",
+      "apiBookId": 1051,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 55",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1050",
+      "apiBookId": 1050,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 56",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1052",
+      "apiBookId": 1052,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 58",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1053",
+      "apiBookId": 1053,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 59",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1054",
+      "apiBookId": 1054,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 60",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1055",
+      "apiBookId": 1055,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 61",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1347",
+      "apiBookId": 1347,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 61",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1348",
+      "apiBookId": 1348,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 64",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1056",
+      "apiBookId": 1056,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 66",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1350",
+      "apiBookId": 1350,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 67",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1058",
+      "apiBookId": 1058,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 69",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1349",
+      "apiBookId": 1349,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 69",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1057",
+      "apiBookId": 1057,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 71",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1351",
+      "apiBookId": 1351,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 71",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1059",
+      "apiBookId": 1059,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 72",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1352",
+      "apiBookId": 1352,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 72",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1060",
+      "apiBookId": 1060,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 73",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1356",
+      "apiBookId": 1356,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 73",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1360",
+      "apiBookId": 1360,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 73",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1061",
+      "apiBookId": 1061,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 74",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1062",
+      "apiBookId": 1062,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 75",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1353",
+      "apiBookId": 1353,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 75",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1063",
+      "apiBookId": 1063,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 76",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1354",
+      "apiBookId": 1354,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 76",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1065",
+      "apiBookId": 1065,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 77",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1355",
+      "apiBookId": 1355,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 77",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1064",
+      "apiBookId": 1064,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 78",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1357",
+      "apiBookId": 1357,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 78",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1066",
+      "apiBookId": 1066,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 79",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1358",
+      "apiBookId": 1358,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 79",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1067",
+      "apiBookId": 1067,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 80",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1359",
+      "apiBookId": 1359,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 80",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1068",
+      "apiBookId": 1068,
+      "code": "ARSH",
+      "title": "The Advent Review and Sabbath Herald, vol. 81",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1646",
+      "apiBookId": 1646,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 2",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1645",
+      "apiBookId": 1645,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 3",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1644",
+      "apiBookId": 1644,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 4",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1643",
+      "apiBookId": 1643,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 5",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1642",
+      "apiBookId": 1642,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 6",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1641",
+      "apiBookId": 1641,
+      "code": "ARSH",
+      "title": "The Advent Review, and Sabbath Herald, vol. 7",
+      "author": "The Advent Review and Sabbath Herald",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1640",
+      "apiBookId": 1640,
+      "code": "ADRE",
+      "title": "The Advent Review, vol. 1",
+      "author": "Advent Review",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1639",
+      "apiBookId": 1639,
+      "code": "ADTE",
+      "title": "The Advent Testimony, vol. 1 (partial)",
+      "author": "The Advent Testimony",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1070",
+      "apiBookId": 1070,
+      "code": "TAMP",
+      "title": "The American Papacy",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1361",
+      "apiBookId": 1361,
+      "code": "ASUHR",
+      "title": "The American Sabbath Union and Human Rights",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1072",
+      "apiBookId": 1072,
+      "code": "AMS",
+      "title": "The American Sentinel 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1073",
+      "apiBookId": 1073,
+      "code": "AMS",
+      "title": "The American Sentinel 10",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1071",
+      "apiBookId": 1071,
+      "code": "AMS",
+      "title": "The American Sentinel 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1075",
+      "apiBookId": 1075,
+      "code": "AMS",
+      "title": "The American Sentinel 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1074",
+      "apiBookId": 1074,
+      "code": "AMS",
+      "title": "The American Sentinel 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1078",
+      "apiBookId": 1078,
+      "code": "AMS",
+      "title": "The American Sentinel 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1076",
+      "apiBookId": 1076,
+      "code": "AMS",
+      "title": "The American Sentinel 15",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1079",
+      "apiBookId": 1079,
+      "code": "AMS",
+      "title": "The American Sentinel 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1080",
+      "apiBookId": 1080,
+      "code": "AMS",
+      "title": "The American Sentinel 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1081",
+      "apiBookId": 1081,
+      "code": "AMS",
+      "title": "The American Sentinel 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1082",
+      "apiBookId": 1082,
+      "code": "AMS",
+      "title": "The American Sentinel 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1083",
+      "apiBookId": 1083,
+      "code": "AMS",
+      "title": "The American Sentinel 6",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1084",
+      "apiBookId": 1084,
+      "code": "AMS",
+      "title": "The American Sentinel 7",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1085",
+      "apiBookId": 1085,
+      "code": "AMS",
+      "title": "The American Sentinel 8",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1087",
+      "apiBookId": 1087,
+      "code": "AMS",
+      "title": "The American Sentinel 9",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1364",
+      "apiBookId": 1364,
+      "code": "ATO",
+      "title": "The Atonement",
+      "author": "James M. Stephenson",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1485",
+      "apiBookId": 1485,
+      "code": "AERS",
+      "title": "The Atonement",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1086",
+      "apiBookId": 1086,
+      "code": "AJB",
+      "title": "The Autobiography of Elder Joseph Bates",
+      "author": "Joseph Bates",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1069",
+      "apiBookId": 1069,
+      "code": "BIC",
+      "title": "The Bible Class",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1623",
+      "apiBookId": 1623,
+      "code": "BEST",
+      "title": "The Bible Echo Articles",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1090",
+      "apiBookId": 1090,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 10",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1091",
+      "apiBookId": 1091,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1363",
+      "apiBookId": 1363,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 11",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1093",
+      "apiBookId": 1093,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1365",
+      "apiBookId": 1365,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 12",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1092",
+      "apiBookId": 1092,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1366",
+      "apiBookId": 1366,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1095",
+      "apiBookId": 1095,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1367",
+      "apiBookId": 1367,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1094",
+      "apiBookId": 1094,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 15",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1368",
+      "apiBookId": 1368,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 15",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1096",
+      "apiBookId": 1096,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 16",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1097",
+      "apiBookId": 1097,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 17",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1377",
+      "apiBookId": 1377,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 7",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1099",
+      "apiBookId": 1099,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 8",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1378",
+      "apiBookId": 1378,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 8",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1100",
+      "apiBookId": 1100,
+      "code": "BEST",
+      "title": "The Bible Echo, vol. 9",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1486",
+      "apiBookId": 1486,
+      "code": "BISA",
+      "title": "The Bible Sabbath",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1381",
+      "apiBookId": 1381,
+      "code": "TBI",
+      "title": "The Biblical Institute",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1380",
+      "apiBookId": 1380,
+      "code": "BEA",
+      "title": "The Blair Educational Amendment",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1339",
+      "apiBookId": 1339,
+      "code": "BSRB",
+      "title": "The Blair Sunday-Rest Bill",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1112",
+      "apiBookId": 1112,
+      "code": "CAR",
+      "title": "The Captivity of the Republic",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1089",
+      "apiBookId": 1089,
+      "code": "ChSa",
+      "title": "The Change of the Sabbath",
+      "author": "George Ide Butler",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1114",
+      "apiBookId": 1114,
+      "code": "CHE",
+      "title": "The Christian Educator, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1116",
+      "apiBookId": 1116,
+      "code": "CEWF",
+      "title": "The Christian Experience of William E. Foy",
+      "author": "William Ellis Foy",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1119",
+      "apiBookId": 1119,
+      "code": "COOD",
+      "title": "The Church: Its Organization, Order and Discipline",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1117",
+      "apiBookId": 1117,
+      "code": "TCPT",
+      "title": "The Churches and the Public Treasury",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1118",
+      "apiBookId": 1118,
+      "code": "CYMFC",
+      "title": "The Columbian Year and the Meaning of the Four Centuries",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1120",
+      "apiBookId": 1120,
+      "code": "COML",
+      "title": "The Coming of Our Lord",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1121",
+      "apiBookId": 1121,
+      "code": "CRBJ",
+      "title": "The Commandment to Restore and to Build Jerusalem",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1122",
+      "apiBookId": 1122,
+      "code": "TFTC",
+      "title": "The Complete Testimony of the Fathers of the First Three Centuries Concerning the Sabbath and First Day",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1124",
+      "apiBookId": 1124,
+      "code": "CWCP",
+      "title": "The Consecrated Way to Christian Perfection",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1123",
+      "apiBookId": 1123,
+      "code": "CRP",
+      "title": "The Crime at Pocasset",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1127",
+      "apiBookId": 1127,
+      "code": "CIS",
+      "title": "The Cross and its Shadow",
+      "author": "Stephen Nelson Haskell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1383",
+      "apiBookId": 1383,
+      "code": "CRCH",
+      "title": "The Cross of Christ",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1638",
+      "apiBookId": 1638,
+      "code": "DAAR",
+      "title": "The Daily Argus Extracts",
+      "author": "The Daily Argus",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1125",
+      "apiBookId": 1125,
+      "code": "DIO",
+      "title": "The Daily Inter Ocean Articles",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1386",
+      "apiBookId": 1386,
+      "code": "DJWW",
+      "title": "The Defense of Elder James White and Wife",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1126",
+      "apiBookId": 1126,
+      "code": "DSD",
+      "title": "The Definite Seventh Day",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-14651",
+      "apiBookId": 14651,
+      "code": "DHF",
+      "title": "The Divine-Human Family",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1387",
+      "apiBookId": 1387,
+      "code": "TDOC",
+      "title": "The Doctrine of Christ",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1487",
+      "apiBookId": 1487,
+      "code": "LELJB",
+      "title": "The Early Life and Later Experience and Labors of Elder Joseph Bates",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1088",
+      "apiBookId": 1088,
+      "code": "EQ",
+      "title": "The Eastern Question",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1129",
+      "apiBookId": 1129,
+      "code": "TER",
+      "title": "The Edmunds Resolution",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1133",
+      "apiBookId": 1133,
+      "code": "EB",
+      "title": "The Empires of the Bible from the Confusion of Tongues to the Babylonian Captivity",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1332",
+      "apiBookId": 1332,
+      "code": "EVCO",
+      "title": "The Everlasting Covenant",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1130",
+      "apiBookId": 1130,
+      "code": "FDNS",
+      "title": "The First Day of the Week Not the Sabbath of the Lord",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1488",
+      "apiBookId": 1488,
+      "code": "FUMP",
+      "title": "The Four Universal Monarchies of the Prophecy of Daniel, and God’s Everlasting Kingdom",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1388",
+      "apiBookId": 1388,
+      "code": "FAF",
+      "title": "The Full Assurance of Faith",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1489",
+      "apiBookId": 1489,
+      "code": "GOL",
+      "title": "The Game of Life",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1391",
+      "apiBookId": 1391,
+      "code": "GTI",
+      "title": "The Glad Tidings",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1131",
+      "apiBookId": 1131,
+      "code": "GGE",
+      "title": "The Glory of God in the Earth",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1390",
+      "apiBookId": 1390,
+      "code": "GOSC",
+      "title": "The Gospel in Creation",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1393",
+      "apiBookId": 1393,
+      "code": "GBG",
+      "title": "The Gospel in the Book of Galatians: A Review",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1128",
+      "apiBookId": 1128,
+      "code": "GOH",
+      "title": "The Gospel of Health, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1135",
+      "apiBookId": 1135,
+      "code": "GOH",
+      "title": "The Gospel of Health, vol. 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1392",
+      "apiBookId": 1392,
+      "code": "GRCO",
+      "title": "The Great Commandment",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1137",
+      "apiBookId": 1137,
+      "code": "GEP",
+      "title": "The Great Empires of Prophecy, from Babylon to the Fall of Rome",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1136",
+      "apiBookId": 1136,
+      "code": "GNT",
+      "title": "The Great Nations of To-day",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1140",
+      "apiBookId": 1140,
+      "code": "GSAM",
+      "title": "The Great Second Advent Movement: Its Rise and Progress",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1139",
+      "apiBookId": 1139,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1141",
+      "apiBookId": 1141,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1395",
+      "apiBookId": 1395,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 2",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1115",
+      "apiBookId": 1115,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1397",
+      "apiBookId": 1397,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 3",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1143",
+      "apiBookId": 1143,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1134",
+      "apiBookId": 1134,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1398",
+      "apiBookId": 1398,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 5",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1144",
+      "apiBookId": 1144,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 6",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1384",
+      "apiBookId": 1384,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 6",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1146",
+      "apiBookId": 1146,
+      "code": "HOMI",
+      "title": "The Home Missionary, vol. 9",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1490",
+      "apiBookId": 1490,
+      "code": "HDTG",
+      "title": "The Honor Due to God",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1399",
+      "apiBookId": 1399,
+      "code": "HPGO",
+      "title": "The Hope of the Gospel",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1147",
+      "apiBookId": 1147,
+      "code": "ICM",
+      "title": "The Immaculate Conception of the Blessed Virgin Mary",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1148",
+      "apiBookId": 1148,
+      "code": "IOS",
+      "title": "The Immortality of the Soul, Is it a Scriptural Doctrine?",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1637",
+      "apiBookId": 1637,
+      "code": "JUBST",
+      "title": "The Jubilee Standard, vol. 1",
+      "author": "The Jubilee Standard",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1491",
+      "apiBookId": 1491,
+      "code": "JGMT",
+      "title": "The Judgment",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1149",
+      "apiBookId": 1149,
+      "code": "JEO",
+      "title": "The Judgment. Its Events and Their Order",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1400",
+      "apiBookId": 1400,
+      "code": "TKOG",
+      "title": "The Kingdom of God",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1492",
+      "apiBookId": 1492,
+      "code": "LAGO",
+      "title": "The Law and the Gospel",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1150",
+      "apiBookId": 1150,
+      "code": "LBG",
+      "title": "The Law in the Book of Galatians",
+      "author": "George Ide Butler",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1142",
+      "apiBookId": 1142,
+      "code": "LOM",
+      "title": "The Law of Moses",
+      "author": "Owen Russel Loomies Crosier (Crozier)",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1153",
+      "apiBookId": 1153,
+      "code": "LIBO",
+      "title": "The Life Boat, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1145",
+      "apiBookId": 1145,
+      "code": "LIBO",
+      "title": "The Life Boat, vol. 6",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1155",
+      "apiBookId": 1155,
+      "code": "LCA",
+      "title": "The Limits of Civil Authority",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1493",
+      "apiBookId": 1493,
+      "code": "LIWE",
+      "title": "The Literal Week",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1494",
+      "apiBookId": 1494,
+      "code": "LTQ",
+      "title": "The Lost Time Question",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1495",
+      "apiBookId": 1495,
+      "code": "MOB",
+      "title": "The Mark of the Beast",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1156",
+      "apiBookId": 1156,
+      "code": "MON",
+      "title": "The Marshaling of the Nations",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1621",
+      "apiBookId": 1621,
+      "code": "MANA",
+      "title": "The Marvel of Nations",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1497",
+      "apiBookId": 1497,
+      "code": "MMC",
+      "title": "The Medical Missionary Conference Bulletin",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1498",
+      "apiBookId": 1498,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 10",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1159",
+      "apiBookId": 1159,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1499",
+      "apiBookId": 1499,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 12",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1158",
+      "apiBookId": 1158,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1500",
+      "apiBookId": 1500,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1160",
+      "apiBookId": 1160,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1501",
+      "apiBookId": 1501,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1161",
+      "apiBookId": 1161,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 15",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1502",
+      "apiBookId": 1502,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 15",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1162",
+      "apiBookId": 1162,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 16",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1164",
+      "apiBookId": 1164,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 17",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1163",
+      "apiBookId": 1163,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 18",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1503",
+      "apiBookId": 1503,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 18",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1504",
+      "apiBookId": 1504,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 7",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1505",
+      "apiBookId": 1505,
+      "code": "MEDM",
+      "title": "The Medical Missionary, vol. 9",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1507",
+      "apiBookId": 1507,
+      "code": "MISM",
+      "title": "The Missionary Magazine, vol. 10",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1166",
+      "apiBookId": 1166,
+      "code": "MISM",
+      "title": "The Missionary Magazine, vol. 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1508",
+      "apiBookId": 1508,
+      "code": "MISM",
+      "title": "The Missionary Magazine, vol. 11",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1509",
+      "apiBookId": 1509,
+      "code": "MISM",
+      "title": "The Missionary Magazine, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1510",
+      "apiBookId": 1510,
+      "code": "MISM",
+      "title": "The Missionary Magazine, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1168",
+      "apiBookId": 1168,
+      "code": "TMW",
+      "title": "The Missionary Worker, vol. 7",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1169",
+      "apiBookId": 1169,
+      "code": "NRCAH",
+      "title": "The National Reformed Constitution and the American Hierarchy",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1170",
+      "apiBookId": 1170,
+      "code": "NSLRLL",
+      "title": "The National Sunday Law [RLL]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1171",
+      "apiBookId": 1171,
+      "code": "NSLS18",
+      "title": "The National Sunday Law [SL18]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1167",
+      "apiBookId": 1167,
+      "code": "NSLS27",
+      "title": "The National Sunday Law [SL27]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1511",
+      "apiBookId": 1511,
+      "code": "NTMS",
+      "title": "The Nature and Tendency of Modern Spiritualism",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1512",
+      "apiBookId": 1512,
+      "code": "OMC",
+      "title": "The Old Moral Code of Ten Commandments Not Revised",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1513",
+      "apiBookId": 1513,
+      "code": "OGSO",
+      "title": "The Origin and Growth of Sunday Observance in the Christian Church",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1514",
+      "apiBookId": 1514,
+      "code": "PARA",
+      "title": "The Parable",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1172",
+      "apiBookId": 1172,
+      "code": "POTE",
+      "title": "The Peopling of the Earth",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1619",
+      "apiBookId": 1619,
+      "code": "PRUS",
+      "title": "The Peril of the Republic of the United States of America",
+      "author": "Percy Tilson Magan",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1174",
+      "apiBookId": 1174,
+      "code": "PRL",
+      "title": "The Perpetuity of the Royal Law",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1515",
+      "apiBookId": 1515,
+      "code": "PSDS",
+      "title": "The Perpetuity of the Seventh-day Sabbath",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1152",
+      "apiBookId": 1152,
+      "code": "PBE",
+      "title": "The Place of the Bible in Education",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1516",
+      "apiBookId": 1516,
+      "code": "POFO",
+      "title": "The Power of Forgiveness",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1175",
+      "apiBookId": 1175,
+      "code": "TPG",
+      "title": "The Power of the Gospel",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1618",
+      "apiBookId": 1618,
+      "code": "PTUK",
+      "title": "The Present Truth [UK] Articles",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1636",
+      "apiBookId": 1636,
+      "code": "PTJW",
+      "title": "The Present Truth, vol. 1",
+      "author": "S.N. Haskell, Wm. Ings, J.H. Durland",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1178",
+      "apiBookId": 1178,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 10",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1518",
+      "apiBookId": 1518,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 10",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1179",
+      "apiBookId": 1179,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1519",
+      "apiBookId": 1519,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 11",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1180",
+      "apiBookId": 1180,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-12150",
+      "apiBookId": 12150,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 12",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1173",
+      "apiBookId": 1173,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-12387",
+      "apiBookId": 12387,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1181",
+      "apiBookId": 1181,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-12445",
+      "apiBookId": 12445,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1183",
+      "apiBookId": 1183,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 15",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-12433",
+      "apiBookId": 12433,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 15",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1184",
+      "apiBookId": 1184,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 16",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1405",
+      "apiBookId": 1405,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 16",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1182",
+      "apiBookId": 1182,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 17",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1185",
+      "apiBookId": 1185,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 18",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1186",
+      "apiBookId": 1186,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 19",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1188",
+      "apiBookId": 1188,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1520",
+      "apiBookId": 1520,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 3",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1177",
+      "apiBookId": 1177,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1521",
+      "apiBookId": 1521,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 4",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1522",
+      "apiBookId": 1522,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 6",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1190",
+      "apiBookId": 1190,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 7",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1523",
+      "apiBookId": 1523,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 7",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1187",
+      "apiBookId": 1187,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 8",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1524",
+      "apiBookId": 1524,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 8",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1192",
+      "apiBookId": 1192,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 9",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1525",
+      "apiBookId": 1525,
+      "code": "PTUK",
+      "title": "The Present Truth, vol. 9",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1194",
+      "apiBookId": 1194,
+      "code": "PSC",
+      "title": "The Probability of the Second Coming of Christ About A.D. 1843",
+      "author": "Josiah Litch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1617",
+      "apiBookId": 1617,
+      "code": "PGGC",
+      "title": "The Prophetic Gift in the Gospel Church",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1193",
+      "apiBookId": 1193,
+      "code": "PSPRR",
+      "title": "The Puritan Sabbath for “Physical Rest”",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1195",
+      "apiBookId": 1195,
+      "code": "PSPRA",
+      "title": "The Puritan Sabbath for “Physical Rest” [Australian]",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1526",
+      "apiBookId": 1526,
+      "code": "RAR",
+      "title": "The Redeemer and Redeemed",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1527",
+      "apiBookId": 1527,
+      "code": "RRPG",
+      "title": "The Rest That Remains for the People of God",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1196",
+      "apiBookId": 1196,
+      "code": "RMLA",
+      "title": "The Rich Man and Lazarus",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1401",
+      "apiBookId": 1401,
+      "code": "RMLS",
+      "title": "The Rich Man and Lazurus",
+      "author": "George Storrs",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1199",
+      "apiBookId": 1199,
+      "code": "ROP",
+      "title": "The Rights of the People",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1528",
+      "apiBookId": 1528,
+      "code": "SASW",
+      "title": "The Sabbath-School Worker",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1197",
+      "apiBookId": 1197,
+      "code": "SITL",
+      "title": "The Sabbatic Institution, and the Two Laws",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1407",
+      "apiBookId": 1407,
+      "code": "SAIN",
+      "title": "The Saints’ Inheritance",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1198",
+      "apiBookId": 1198,
+      "code": "SANC",
+      "title": "The Sanctuary",
+      "author": "Owen Russel Loomies Crosier (Crozier)",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1408",
+      "apiBookId": 1408,
+      "code": "STTHD",
+      "title": "The Sanctuary and the Twenty-three Hundred Days of Daniel 8:14",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1200",
+      "apiBookId": 1200,
+      "code": "S23D",
+      "title": "The Sanctuary and Twenty-three Hundred Days",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1201",
+      "apiBookId": 1201,
+      "code": "SOTB",
+      "title": "The Sanctuary of the Bible",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1529",
+      "apiBookId": 1529,
+      "code": "SATDSD",
+      "title": "The Sanctuary, the 2300 Days, and the Shut Door",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1409",
+      "apiBookId": 1409,
+      "code": "SOTW",
+      "title": "The Saviour of the World",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1530",
+      "apiBookId": 1530,
+      "code": "SEADV",
+      "title": "The Second Advent",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1203",
+      "apiBookId": 1203,
+      "code": "TSAM",
+      "title": "The Second Advent Manual",
+      "author": "Apollos Hale",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1531",
+      "apiBookId": 1531,
+      "code": "SCOC",
+      "title": "The Second Coming of Christ",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1411",
+      "apiBookId": 1411,
+      "code": "SHR",
+      "title": "The Seven Heads of Revelation 12, 13, and 17",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1532",
+      "apiBookId": 1532,
+      "code": "SDSL",
+      "title": "The Seventh Day of the Week is the Sabbath of the Lord",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1533",
+      "apiBookId": 1533,
+      "code": "SDSNA",
+      "title": "The Seventh Day Sabbath Not Abolished",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1535",
+      "apiBookId": 1535,
+      "code": "ST186x",
+      "title": "The Signs of the Times",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1534",
+      "apiBookId": 1534,
+      "code": "ST1853",
+      "title": "The Signs of the Times [1853]",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1204",
+      "apiBookId": 1204,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 10",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1537",
+      "apiBookId": 1537,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 10",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1205",
+      "apiBookId": 1205,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1538",
+      "apiBookId": 1538,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 11",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1206",
+      "apiBookId": 1206,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1539",
+      "apiBookId": 1539,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 12",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1207",
+      "apiBookId": 1207,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1540",
+      "apiBookId": 1540,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 13",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1209",
+      "apiBookId": 1209,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1541",
+      "apiBookId": 1541,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 14",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1208",
+      "apiBookId": 1208,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 15",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1542",
+      "apiBookId": 1542,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 15",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1210",
+      "apiBookId": 1210,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 16",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1543",
+      "apiBookId": 1543,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 16",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1191",
+      "apiBookId": 1191,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 17",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1544",
+      "apiBookId": 1544,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 17",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1212",
+      "apiBookId": 1212,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 18",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1545",
+      "apiBookId": 1545,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 18",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1546",
+      "apiBookId": 1546,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 19",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1213",
+      "apiBookId": 1213,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 20",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1547",
+      "apiBookId": 1547,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 20",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1214",
+      "apiBookId": 1214,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 21",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1548",
+      "apiBookId": 1548,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 21",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1189",
+      "apiBookId": 1189,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 22",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1549",
+      "apiBookId": 1549,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 22",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1216",
+      "apiBookId": 1216,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 23",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1550",
+      "apiBookId": 1550,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 23",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1551",
+      "apiBookId": 1551,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 24",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1217",
+      "apiBookId": 1217,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 25",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1552",
+      "apiBookId": 1552,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 25",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1218",
+      "apiBookId": 1218,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 26",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1553",
+      "apiBookId": 1553,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 26",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1219",
+      "apiBookId": 1219,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 27",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1554",
+      "apiBookId": 1554,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 27",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1220",
+      "apiBookId": 1220,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 28",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1555",
+      "apiBookId": 1555,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 28",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1221",
+      "apiBookId": 1221,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 29",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1223",
+      "apiBookId": 1223,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1215",
+      "apiBookId": 1215,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 31",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1224",
+      "apiBookId": 1224,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1556",
+      "apiBookId": 1556,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 5",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1413",
+      "apiBookId": 1413,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 56",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1414",
+      "apiBookId": 1414,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 57",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1557",
+      "apiBookId": 1557,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 7",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1222",
+      "apiBookId": 1222,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 8",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1558",
+      "apiBookId": 1558,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 8",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1225",
+      "apiBookId": 1225,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 9",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1559",
+      "apiBookId": 1559,
+      "code": "SITI",
+      "title": "The Signs of the Times, vol. 9",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1560",
+      "apiBookId": 1560,
+      "code": "SSTR",
+      "title": "The Sounding of the Seven Trumpets of Revelation 8 and 9",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-2779",
+      "apiBookId": 2779,
+      "code": "SOR",
+      "title": "The Southern Review, vol. 10",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1230",
+      "apiBookId": 1230,
+      "code": "SSHL",
+      "title": "The Southern Sentinel and Herald of Liberty, vol. 2",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1229",
+      "apiBookId": 1229,
+      "code": "SSHL",
+      "title": "The Southern Sentinel and Herald of Liberty, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1211",
+      "apiBookId": 1211,
+      "code": "SOWA",
+      "title": "The Southern Watchman, vol. 12",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1233",
+      "apiBookId": 1233,
+      "code": "SOWA",
+      "title": "The Southern Watchmen, vol. 13",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1234",
+      "apiBookId": 1234,
+      "code": "SOWA",
+      "title": "The Southern Watchmen, vol. 14",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1561",
+      "apiBookId": 1561,
+      "code": "SGOM",
+      "title": "The Spirit of God",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1235",
+      "apiBookId": 1235,
+      "code": "SOC",
+      "title": "The State of the Churches",
+      "author": "Merritt E. Cornell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1236",
+      "apiBookId": 1236,
+      "code": "SDP",
+      "title": "The Story of Daniel the Prophet",
+      "author": "Stephen Nelson Haskell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1237",
+      "apiBookId": 1237,
+      "code": "SSP",
+      "title": "The Story of the Seer of Patmos",
+      "author": "Stephen Nelson Haskell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1562",
+      "apiBookId": 1562,
+      "code": "SFKK",
+      "title": "The Sure Foundation and the Keys of the Kingdom",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1563",
+      "apiBookId": 1563,
+      "code": "TCNA",
+      "title": "The Ten Commandments",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1564",
+      "apiBookId": 1564,
+      "code": "TTAM",
+      "title": "The Third Angel’s Message",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1615",
+      "apiBookId": 1615,
+      "code": "TAR",
+      "title": "The Three Angels of Revelation 14:6-12",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1240",
+      "apiBookId": 1240,
+      "code": "TMR",
+      "title": "The Three Messages of Revelation 14:6-12",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1242",
+      "apiBookId": 1242,
+      "code": "TDC",
+      "title": "The Topeka Daily Capital, vol. 11",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1635",
+      "apiBookId": 1635,
+      "code": "TRMC",
+      "title": "The True Midnight Cry, vol. 1, no. 1",
+      "author": "The True Midnight Cry, vol. 1, no. E",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1565",
+      "apiBookId": 1565,
+      "code": "TFNOS",
+      "title": "The Truth Found",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1396",
+      "apiBookId": 1396,
+      "code": "TTA",
+      "title": "The Two Adams",
+      "author": "Thomas Motherwell Preble",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1417",
+      "apiBookId": 1417,
+      "code": "TTC",
+      "title": "The Two Covenants",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1241",
+      "apiBookId": 1241,
+      "code": "TWL",
+      "title": "The Two Laws",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1249",
+      "apiBookId": 1249,
+      "code": "TTR",
+      "title": "The Two Republics, or Rome and the United States of America",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1566",
+      "apiBookId": 1566,
+      "code": "TTKGG",
+      "title": "The Two Thrones Representing the Kingdoms of Grace and of Glory",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1410",
+      "apiBookId": 1410,
+      "code": "THB",
+      "title": "The Two-Horned Beast",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1418",
+      "apiBookId": 1418,
+      "code": "TBUS",
+      "title": "The Two-Horned Beast of Rev. XIII, a Symbol of the United States",
+      "author": "John Norton Loughborough",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-2008",
+      "apiBookId": 2008,
+      "code": "UCS",
+      "title": "The Union of Church and State in the United States",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1419",
+      "apiBookId": 1419,
+      "code": "USLP",
+      "title": "The United States in the Light of Prophecy",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1420",
+      "apiBookId": 1420,
+      "code": "VEGW",
+      "title": "The Visions of Mrs. E.G. White",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1421",
+      "apiBookId": 1421,
+      "code": "WVTP",
+      "title": "The Warning Voice of Time and Prophecy",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1244",
+      "apiBookId": 1244,
+      "code": "WDNP",
+      "title": "The Wicked Dead: Are They Now Being Punished?",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1245",
+      "apiBookId": 1245,
+      "code": "WGI",
+      "title": "The World’s Greatest Issues: Military, Diplomatic, Religious",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1246",
+      "apiBookId": 1246,
+      "code": "TFC",
+      "title": "Thoughts for the Candid",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1567",
+      "apiBookId": 1567,
+      "code": "TOB",
+      "title": "Thoughts on Baptism",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1247",
+      "apiBookId": 1247,
+      "code": "TOS",
+      "title": "Thoughts on the Sabbath",
+      "author": "James Springer White",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1248",
+      "apiBookId": 1248,
+      "code": "TSPL",
+      "title": "Thoughts on the Sabbath & the Perpetuity of the Law of God",
+      "author": "John Nevins Andrews",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1568",
+      "apiBookId": 1568,
+      "code": "THSA",
+      "title": "Three Sabbaths",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1232",
+      "apiBookId": 1232,
+      "code": "TTL",
+      "title": "Tremont Temple Lectures",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1422",
+      "apiBookId": 1422,
+      "code": "TRIMM",
+      "title": "Trine Immersion",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1250",
+      "apiBookId": 1250,
+      "code": "TRU",
+      "title": "Truth",
+      "author": "Roswell Fenner Cottrell",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1252",
+      "apiBookId": 1252,
+      "code": "UCR",
+      "title": "Union Conference Record, vol. 1",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1253",
+      "apiBookId": 1253,
+      "code": "UCR",
+      "title": "Union Conference Record, vol. 3",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1254",
+      "apiBookId": 1254,
+      "code": "UCR",
+      "title": "Union Conference Record, vol. 4",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1255",
+      "apiBookId": 1255,
+      "code": "UCR",
+      "title": "Union Conference Record, vol. 5",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1256",
+      "apiBookId": 1256,
+      "code": "UCR",
+      "title": "Union Conference Record, vol. 6",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1257",
+      "apiBookId": 1257,
+      "code": "USCS",
+      "title": "Urge Separation Church and State",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1416",
+      "apiBookId": 1416,
+      "code": "VICH",
+      "title": "Victory in Christ",
+      "author": "William Warren Prescott",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1258",
+      "apiBookId": 1258,
+      "code": "VNR",
+      "title": "Views of National Reform, Series One",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1259",
+      "apiBookId": 1259,
+      "code": "VOS",
+      "title": "Views of Sanctification",
+      "author": "Charles Fitch",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1423",
+      "apiBookId": 1423,
+      "code": "VBCJW",
+      "title": "Vindication of the Business Career of Elder James White",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1569",
+      "apiBookId": 1569,
+      "code": "VDRU",
+      "title": "Vindication of the Doctrine of the Resurrection of the Unjust",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1613",
+      "apiBookId": 1613,
+      "code": "WOR",
+      "title": "Waggoner on Romans",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1261",
+      "apiBookId": 1261,
+      "code": "WIP",
+      "title": "What is Patriotism in the United States?",
+      "author": "Alonzo Trevier Jones",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1425",
+      "apiBookId": 1425,
+      "code": "WWNC",
+      "title": "What Was Nailed to the Cross?",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1572",
+      "apiBookId": 1572,
+      "code": "WDK",
+      "title": "Which Day Do You Keep and Why?",
+      "author": "Joseph Harvey Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1424",
+      "apiBookId": 1424,
+      "code": "WCS",
+      "title": "Who Changed the Sabbath?",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1571",
+      "apiBookId": 1571,
+      "code": "WWORL",
+      "title": "Why We Oppose Religious Legislation",
+      "author": "Ellet Joseph Waggoner",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1427",
+      "apiBookId": 1427,
+      "code": "WMAD",
+      "title": "William Miller’s Apology and Defence, August 1",
+      "author": "William Miller",
+      "collection": "pioneer"
+    },
+    {
+      "id": "p-1426",
+      "apiBookId": 1426,
+      "code": "WIEX",
+      "title": "Without Excuse",
+      "author": "Uriah Smith",
+      "collection": "pioneer"
+    }
+  ]
+}

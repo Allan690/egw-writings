@@ -2,7 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { getSearchApi } from './db/corpus'
 import { getReadingPosition } from './db/userStore'
 import { useCorpusInit } from './hooks/useCorpusInit'
+import { usePioneerCorpus } from './hooks/usePioneerCorpus'
 import { useReaderSettings } from './hooks/useReaderSettings'
+import { subscribePioneerLoad } from './db/pioneerLoader'
+import type { BookCollection } from './lib/corpusConstants'
 import { useSearch } from './hooks/useSearch'
 import type { ReaderTarget, SearchResult, View } from './types'
 import { AppShell } from './components/AppShell'
@@ -27,19 +30,41 @@ function LoadingScreen({ message, error }: { message: string; error?: string | n
 export default function App() {
   useReaderSettings()
   const { ready, error } = useCorpusInit()
+  const pioneer = usePioneerCorpus(ready)
   const search = useSearch()
   const [view, setView] = useState<View>('library')
   const [readerTarget, setReaderTarget] = useState<ReaderTarget | null>(null)
-  const [books, setBooks] = useState<{ id: string; title: string; code: string }[]>([])
+  const [books, setBooks] = useState<
+    { id: string; title: string; code: string; collection: BookCollection; author: string }[]
+  >([])
   const searchInputRef = useRef<HTMLInputElement>(null)
+
+  const refreshBooks = () => {
+    getSearchApi()
+      .getBooks('all')
+      .then((rows) =>
+        setBooks(
+          rows.map((b) => ({
+            id: b.id,
+            title: b.title,
+            code: b.code,
+            collection: b.collection,
+            author: b.author,
+          })),
+        ),
+      )
+  }
 
   useEffect(() => {
     if (!ready) return
-    getSearchApi()
-      .getBooks()
-      .then((rows) =>
-        setBooks(rows.map((b) => ({ id: b.id, title: b.title, code: b.code }))),
-      )
+    refreshBooks()
+  }, [ready])
+
+  useEffect(() => {
+    if (!ready) return
+    return subscribePioneerLoad((s) => {
+      if (s.status === 'ready') refreshBooks()
+    })
   }, [ready])
 
   useEffect(() => {
@@ -111,6 +136,10 @@ export default function App() {
           searching={search.searching}
           bookFilter={search.bookFilter}
           onBookFilterChange={search.setBookFilter}
+          collectionFilter={search.collectionFilter}
+          onCollectionFilterChange={search.setCollectionFilter}
+          pioneerStatus={pioneer.status}
+          pioneerProgress={pioneer.progress}
           books={books}
           onOpenResult={openResult}
           searchInputRef={searchInputRef}

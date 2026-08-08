@@ -8,10 +8,12 @@ import {
   listHighlights,
   removeBookmark,
   removeHighlight,
+  removeHighlightsInRange,
   saveReadingPosition,
 } from '../db/userStore'
 import { readerTextClass, useReaderSettings } from '../hooks/useReaderSettings'
-import { getSelectionOffsets, highlightColor, renderHighlightedText } from '../lib/highlightText'
+import { getSelectionOffsets, highlightClassName, highlightsOverlapSelection, renderHighlightedText } from '../lib/highlightText'
+import type { BookCollection } from '../lib/corpusConstants'
 import type {
   Bookmark,
   Highlight as SavedHighlight,
@@ -19,6 +21,7 @@ import type {
   ReaderTarget,
 } from '../types'
 import { ChapterPicker } from './ChapterPicker'
+import { CorpusBadge, PioneerDisclaimer } from './CorpusBadge'
 import { IconChevronDown, IconChevronLeft } from './Icons'
 import { ReaderSettingsPanel } from './ReaderSettingsPanel'
 import { SelectionToolbar } from './SelectionToolbar'
@@ -46,6 +49,8 @@ export function ReaderView({ target, onBack }: Props) {
   const { settings, setTheme, setFontSize, setLineHeight } = useReaderSettings()
   const [bookTitle, setBookTitle] = useState('')
   const [bookCode, setBookCode] = useState('')
+  const [bookAuthor, setBookAuthor] = useState('')
+  const [bookCollection, setBookCollection] = useState<BookCollection>('egw')
   const [chapters, setChapters] = useState<ChapterOption[]>([])
   const [chapterNum, setChapterNum] = useState(target.chapterNum)
   const [paragraphs, setParagraphs] = useState<Paragraph[]>([])
@@ -70,14 +75,15 @@ export function ReaderView({ target, onBack }: Props) {
       setLoading(true)
       setSelection(null)
       const api = getSearchApi()
-      const [books, chs, paras] = await Promise.all([
-        api.getBooks(),
+      const [book, chs, paras] = await Promise.all([
+        api.getBook(bookId),
         api.getChapters(bookId),
         api.getChapterParagraphs(bookId, num),
       ])
-      const book = books.find((b) => b.id === bookId)
       setBookTitle(book?.title ?? '')
       setBookCode(book?.code ?? '')
+      setBookAuthor(book?.author ?? 'Ellen G. White')
+      setBookCollection(book?.collection ?? 'egw')
       setChapters(chs.map((c) => ({ number: c.number, title: c.title })))
       setParagraphs(paras as Paragraph[])
       setChapterNum(num)
@@ -158,6 +164,27 @@ export function ReaderView({ target, onBack }: Props) {
 
   const applyHighlight = async (color: string) => {
     if (!selection) return
+
+    const paraHighlights = highlightsByPara.get(selection.paragraphId) ?? []
+    const exact = paraHighlights.find(
+      (h) =>
+        h.startOffset === selection.startOffset && h.endOffset === selection.endOffset,
+    )
+    if (exact?.color === color) {
+      await removeHighlight(exact.id)
+      setHighlightsByPara((prev) => {
+        const next = new Map(prev)
+        next.set(
+          selection.paragraphId,
+          (next.get(selection.paragraphId) ?? []).filter((h) => h.id !== exact.id),
+        )
+        return next
+      })
+      window.getSelection()?.removeAllRanges()
+      setSelection(null)
+      return
+    }
+
     const h = await addHighlight(
       selection.paragraphId,
       selection.reference,
@@ -169,12 +196,46 @@ export function ReaderView({ target, onBack }: Props) {
     setHighlightsByPara((prev) => {
       const next = new Map(prev)
       const existing = next.get(selection.paragraphId) ?? []
-      next.set(selection.paragraphId, [...existing, h])
+      const withoutDup = existing.filter(
+        (item) =>
+          !(
+            item.startOffset === selection.startOffset &&
+            item.endOffset === selection.endOffset
+          ),
+      )
+      next.set(selection.paragraphId, [...withoutDup, h])
       return next
     })
     window.getSelection()?.removeAllRanges()
     setSelection(null)
   }
+
+  const clearHighlight = async () => {
+    if (!selection) return
+    const removedIds = await removeHighlightsInRange(
+      selection.paragraphId,
+      selection.startOffset,
+      selection.endOffset,
+    )
+    setHighlightsByPara((prev) => {
+      const next = new Map(prev)
+      next.set(
+        selection.paragraphId,
+        (next.get(selection.paragraphId) ?? []).filter((h) => !removedIds.includes(h.id)),
+      )
+      return next
+    })
+    window.getSelection()?.removeAllRanges()
+    setSelection(null)
+  }
+
+  const selectionHighlights = selection
+    ? highlightsOverlapSelection(
+        highlightsByPara.get(selection.paragraphId) ?? [],
+        selection.startOffset,
+        selection.endOffset,
+      )
+    : []
 
   const shareSelection = async () => {
     const text = selection
@@ -202,11 +263,13 @@ export function ReaderView({ target, onBack }: Props) {
   const chapterTitle =
     chapters.find((c) => c.number === chapterNum)?.title ?? `Chapter ${chapterNum}`
 
-  const prevChapter = chapters.find((c) => c.number < chapterNum)
-  const nextChapter = [...chapters].reverse().find((c) => c.number > chapterNum)
-
   const chapterIndex = chapters.findIndex((c) => c.number === chapterNum)
   const chapterPosition = chapterIndex >= 0 ? chapterIndex + 1 : chapterNum
+  const prevChapter = chapterIndex > 0 ? chapters[chapterIndex - 1] : undefined
+  const nextChapter =
+    chapterIndex >= 0 && chapterIndex < chapters.length - 1
+      ? chapters[chapterIndex + 1]
+      : undefined
 
   return (
     <div className="flex h-[100dvh] flex-col bg-[var(--bg)] text-[var(--text)]">
@@ -253,11 +316,21 @@ export function ReaderView({ target, onBack }: Props) {
             <p className="text-xs font-medium uppercase tracking-wide text-[var(--accent)]">
               {bookCode} · Chapter {chapterNum}
             </p>
-            <h1 className="mt-1 font-serif text-2xl font-semibold leading-tight text-[var(--text)] md:text-3xl">
+            <div className="mt-2 flex flex-wrap items-center gap-2">
+              <CorpusBadge collection={bookCollection} author={bookAuthor} size="md" />
+            </div>
+            <h1 className="mt-2 font-serif text-2xl font-semibold leading-tight text-[var(--text)] md:text-3xl">
               {chapterTitle}
             </h1>
+            <p className="mt-1 font-serif text-base text-[var(--text-2)]">{bookTitle}</p>
 
-            <article className="mt-8 space-y-6">
+            {bookCollection === 'pioneer' && (
+              <div className="mt-6">
+                <PioneerDisclaimer author={bookAuthor} />
+              </div>
+            )}
+
+            <article className={`space-y-6 ${bookCollection === 'pioneer' ? 'mt-4' : 'mt-8'}`}>
               {paragraphs.map((para) => {
                 const saved = bookmarkedIds.has(para.id)
                 const jumpHere = para.id === target.paragraphId
@@ -336,6 +409,8 @@ export function ReaderView({ target, onBack }: Props) {
       {selection && (
         <SelectionToolbar
           onHighlight={(color) => void applyHighlight(color)}
+          onRemoveHighlight={() => void clearHighlight()}
+          canRemoveHighlight={selectionHighlights.length > 0}
           onBookmark={async () => {
             if (!selection) return
             await addBookmark(
@@ -512,8 +587,7 @@ export function SavedView({ onOpen }: BookmarksProps) {
                   >
                     <p className="text-xs font-semibold text-[var(--accent)]">{h.reference}</p>
                     <p
-                      className="mt-2 rounded px-1 font-serif text-[15px] leading-relaxed text-[var(--text-2)]"
-                      style={{ backgroundColor: highlightColor(h.color) }}
+                      className={`mt-2 rounded px-1 font-serif text-[15px] leading-relaxed text-[var(--text-2)] ${highlightClassName(h.color)}`}
                     >
                       &ldquo;{h.text}&rdquo;
                     </p>

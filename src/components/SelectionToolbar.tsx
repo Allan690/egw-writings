@@ -1,7 +1,9 @@
-import { highlightColor } from '../lib/highlightText'
+import { highlightClassName } from '../lib/highlightText'
 
 interface Props {
   onHighlight: (color: string) => void
+  onRemoveHighlight?: () => void
+  canRemoveHighlight?: boolean
   onBookmark: () => void
   onShare: () => void
   onDismiss: () => void
@@ -9,7 +11,14 @@ interface Props {
 
 const colors = ['amber', 'yellow', 'green', 'blue']
 
-export function SelectionToolbar({ onHighlight, onBookmark, onShare, onDismiss }: Props) {
+export function SelectionToolbar({
+  onHighlight,
+  onRemoveHighlight,
+  canRemoveHighlight,
+  onBookmark,
+  onShare,
+  onDismiss,
+}: Props) {
   return (
     <div className="fixed inset-x-0 bottom-20 z-[55] flex justify-center px-4">
       <div className="flex items-center gap-1 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-1.5 shadow-lg">
@@ -19,10 +28,21 @@ export function SelectionToolbar({ onHighlight, onBookmark, onShare, onDismiss }
             type="button"
             aria-label={`Highlight ${c}`}
             onClick={() => onHighlight(c)}
-            className="h-7 w-7 rounded-full border border-[var(--border)]"
-            style={{ backgroundColor: highlightColor(c) }}
+            className={`h-7 w-7 rounded-full border border-[var(--border)] ${highlightClassName(c)}`}
           />
         ))}
+        {canRemoveHighlight && onRemoveHighlight && (
+          <>
+            <span className="mx-1 h-5 w-px bg-[var(--border)]" />
+            <button
+              type="button"
+              onClick={onRemoveHighlight}
+              className="px-2 py-1 text-xs font-medium text-red-600"
+            >
+              Remove
+            </button>
+          </>
+        )}
         <span className="mx-1 h-5 w-px bg-[var(--border)]" />
         <button type="button" onClick={onBookmark} className="px-2 py-1 text-xs text-[var(--text-2)]">
           Save

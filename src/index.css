@@ -17,6 +17,11 @@
   --accent: #92400e;
   --accent-soft: #fef3c7;
   --mark: #fde68a;
+  --hl-yellow: #fef08a;
+  --hl-amber: #fde68a;
+  --hl-green: #bbf7d0;
+  --hl-blue: #bfdbfe;
+  --hl-pink: #fbcfe8;
 }
 
 [data-theme="sepia"] {
@@ -30,6 +35,11 @@
   --accent: #78350f;
   --accent-soft: #f5e6c8;
   --mark: #e8d5a8;
+  --hl-yellow: #f5e6a8;
+  --hl-amber: #edd48a;
+  --hl-green: #b8e6c8;
+  --hl-blue: #b8d4f0;
+  --hl-pink: #f0c8dc;
 }
 
 [data-theme="dark"] {
@@ -42,7 +52,12 @@
   --border: #44403c;
   --accent: #fbbf24;
   --accent-soft: #422006;
-  --mark: #854d0e;
+  --mark: rgba(251, 191, 36, 0.28);
+  --hl-yellow: rgba(250, 204, 21, 0.24);
+  --hl-amber: rgba(251, 191, 36, 0.24);
+  --hl-green: rgba(74, 222, 128, 0.18);
+  --hl-blue: rgba(96, 165, 250, 0.2);
+  --hl-pink: rgba(244, 114, 182, 0.2);
 }
 
 html {
@@ -51,9 +66,14 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  overscroll-behavior-y: none;
   background: var(--bg);
   color: var(--text);
 }
@@ -73,12 +93,48 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 mark {
-  background: var(--mark);
   color: inherit;
   border-radius: 2px;
   padding: 0 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
-[data-theme="dark"] mark {
-  color: #fafaf9;
+.reader-highlight-amber {
+  background: var(--hl-amber);
+}
+
+.reader-highlight-yellow {
+  background: var(--hl-yellow);
+}
+
+.reader-highlight-green {
+  background: var(--hl-green);
+}
+
+.reader-highlight-blue {
+  background: var(--hl-blue);
+}
+
+.reader-highlight-pink {
+  background: var(--hl-pink);
+}
+
+[data-theme="dark"] .reader-highlight-amber,
+[data-theme="dark"] .reader-highlight-yellow,
+[data-theme="dark"] .reader-highlight-green,
+[data-theme="dark"] .reader-highlight-blue,
+[data-theme="dark"] .reader-highlight-pink {
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.search-snippet {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.search-snippet mark {
+  display: inline;
+  max-width: 100%;
+  background: var(--mark);
 }

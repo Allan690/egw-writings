@@ -1,13 +1,16 @@
 import {
+  getBook,
   getBooks,
   getChapterParagraphs,
   getChapters,
   getParagraph,
   initCorpusEngine,
+  isPioneerCorpusReady,
   lookupByReference,
   parseReference,
   searchCorpus,
 } from './searchEngine'
+import type { BookCollection } from '../lib/corpusConstants'
 
 let initPromise: ReturnType<typeof initCorpusEngine> | null = null
 
@@ -23,15 +26,18 @@ export function initCorpus() {
 
 export const searchApi = {
   init: initCorpusEngine,
-  search: searchCorpus,
-  getBooks,
+  search: (query: string, limit?: number, bookId?: string, collection?: BookCollection | 'all') =>
+    searchCorpus(query, limit, bookId, collection),
+  getBooks: (collection?: BookCollection | 'all') => getBooks(collection),
+  getBook,
   getChapters,
   getChapterParagraphs,
-  getParagraph,
+  getParagraph: (id: number, bookId?: string) => getParagraph(id, bookId),
   lookupByReference,
   parseReference,
-  getContext: async (paragraphId: number, radius = 2) => {
-    const base = await getParagraph(paragraphId)
+  isPioneerReady: isPioneerCorpusReady,
+  getContext: async (paragraphId: number, bookId?: string, radius = 2) => {
+    const base = await getParagraph(paragraphId, bookId)
     if (!base) return []
     const paras = await getChapterParagraphs(base.book_id, base.chapter_num)
     const idx = paras.findIndex((p) => p.id === paragraphId)

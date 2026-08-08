@@ -7,7 +7,7 @@ export function renderHighlightedText(
 ): ReactNode {
   const ranges = highlights
     .filter((h) => h.startOffset >= 0 && h.endOffset > h.startOffset && h.endOffset <= text.length)
-    .sort((a, b) => a.startOffset - b.startOffset)
+    .sort((a, b) => a.startOffset - b.startOffset || a.endOffset - b.endOffset)
 
   if (ranges.length === 0) return text
 
@@ -15,17 +15,19 @@ export function renderHighlightedText(
   let cursor = 0
 
   for (const h of ranges) {
-    if (h.startOffset > cursor) {
-      parts.push(text.slice(cursor, h.startOffset))
+    const start = Math.max(h.startOffset, cursor)
+    if (start >= h.endOffset) continue
+
+    if (start > cursor) {
+      parts.push(text.slice(cursor, start))
     }
     parts.push(
       <mark
         key={h.id}
-        className="rounded px-0.5 not-italic"
-        style={{ backgroundColor: highlightColor(h.color) }}
+        className={`${highlightClassName(h.color)} rounded px-0.5 not-italic`}
         title={h.note || undefined}
       >
-        {text.slice(h.startOffset, h.endOffset)}
+        {text.slice(start, h.endOffset)}
       </mark>,
     )
     cursor = h.endOffset
@@ -38,19 +40,29 @@ export function renderHighlightedText(
   return parts
 }
 
-export function highlightColor(color: string): string {
+export function highlightClassName(color: string): string {
   switch (color) {
+    case 'amber':
+      return 'reader-highlight-amber'
     case 'yellow':
-      return '#fef08a'
+      return 'reader-highlight-yellow'
     case 'green':
-      return '#bbf7d0'
+      return 'reader-highlight-green'
     case 'blue':
-      return '#bfdbfe'
+      return 'reader-highlight-blue'
     case 'pink':
-      return '#fbcfe8'
+      return 'reader-highlight-pink'
     default:
-      return '#fde68a'
+      return 'reader-highlight-amber'
   }
+}
+
+export function highlightsOverlapSelection(
+  highlights: Highlight[],
+  startOffset: number,
+  endOffset: number,
+): Highlight[] {
+  return highlights.filter((h) => h.startOffset < endOffset && startOffset < h.endOffset)
 }
 
 export function getSelectionOffsets(

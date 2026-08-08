@@ -32,7 +32,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icons/icon.svg', 'corpus/manifest.json'],
+      includeAssets: ['icons/icon.svg', 'corpus/manifest.json', 'corpus/pioneers-manifest.json'],
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,svg,wasm,json}'],
         runtimeCaching: [
@@ -41,6 +41,18 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'egw-corpus',
+              expiration: {
+                maxEntries: 1,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: /\/corpus\/pioneers\.sqlite(\.gz)?$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'pioneers-corpus',
               expiration: {
                 maxEntries: 1,
                 maxAgeSeconds: 60 * 60 * 24 * 365,

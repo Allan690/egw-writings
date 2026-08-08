@@ -1,7 +1,11 @@
+import type { BookCollection } from './lib/corpusConstants'
+
 export interface Book {
   id: string
   code: string
   title: string
+  author: string
+  collection: BookCollection
   year: number | null
   chapter_count: number
   paragraph_count: number
@@ -30,6 +34,8 @@ export interface SearchResult {
   book_id: string
   book_title: string
   book_code: string
+  book_author: string
+  collection: BookCollection
   chapter_num: number
   chapter_title: string
   para_num: number

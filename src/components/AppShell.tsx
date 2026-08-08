@@ -18,13 +18,13 @@ const NAV: { id: View; label: string; icon: ReactNode }[] = [
 
 export function AppShell({ view, onNavigate, children, hideChrome }: Props) {
   if (hideChrome) {
-    return <div className="h-[100dvh] bg-[var(--bg)]">{children}</div>
+    return <div className="min-h-[100dvh] bg-[var(--bg)]">{children}</div>
   }
 
   return (
-    <div className="flex h-[100dvh] flex-col bg-[var(--bg)] md:h-auto md:min-h-[100dvh] md:flex-row">
-      {/* Desktop side nav */}
-      <aside className="hidden w-52 shrink-0 flex-col border-r border-[var(--border)] bg-[var(--surface)] md:flex">
+    <div className="flex min-h-[100dvh] flex-col bg-[var(--bg)] md:min-h-screen md:flex-row">
+      {/* Desktop side nav — sticky while page scrolls */}
+      <aside className="hidden w-52 shrink-0 flex-col border-r border-[var(--border)] bg-[var(--surface)] md:sticky md:top-0 md:flex md:h-screen md:self-start">
         <div className="px-5 pt-6 pb-4">
           <p className="font-serif text-lg font-semibold text-[var(--text)]">EGW Writings</p>
           <p className="mt-0.5 text-xs text-[var(--text-3)]">Offline · Local-first</p>
@@ -48,15 +48,14 @@ export function AppShell({ view, onNavigate, children, hideChrome }: Props) {
         </nav>
       </aside>
 
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col md:min-h-[100dvh]">
-        {/* Mobile: flex column so footer stays pinned; desktop: normal flow */}
-        <main className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain pb-4 md:overflow-visible md:pb-0">
+      <div className="flex min-w-0 flex-1 flex-col md:self-start">
+        <main className="min-w-0 flex-1 overflow-x-hidden px-0 pb-[calc(4.5rem+env(safe-area-inset-bottom))] md:pb-8">
           {children}
         </main>
 
-        {/* Mobile bottom nav — sticky at viewport bottom */}
+        {/* Mobile bottom nav — fixed; main padding keeps content above it */}
         <nav
-          className="z-50 shrink-0 border-t border-[var(--border)] bg-[var(--surface)] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_12px_rgba(0,0,0,0.06)] md:hidden"
+          className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--border)] bg-[var(--surface)] pb-[env(safe-area-inset-bottom)] shadow-[0_-4px_12px_rgba(0,0,0,0.06)] md:hidden"
           aria-label="Main"
         >
           <div className="flex">

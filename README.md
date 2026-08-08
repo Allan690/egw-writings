@@ -4,9 +4,9 @@ Offline-capable Progressive Web App for reading and searching Ellen G. White's w
 
 ## Features
 
-- **117 books** from [Internet Archive](https://archive.org/details/ellen-g.-white-books)
+- **140+ books** from the official [EGW Writings API](https://a.egwwritings.org)
 - **Instant FTS5 search** with phrase matching and book filters
-- **Reference lookup** (e.g. `PP 155.1`)
+- **Reference lookup** (e.g. `AA 9.1`, `PP 155.1`)
 - **Reader** with highlights, bookmarks, themes, and chapter navigation
 - **Installable PWA** for iPhone and desktop
 
@@ -14,20 +14,34 @@ Offline-capable Progressive Web App for reading and searching Ellen G. White's w
 
 ```bash
 npm install
-npm run corpus:build    # ~2 min, downloads & indexes writings
+```
+
+Create `.env` at the project root (register at [cpanel.egwwritings.org](https://cpanel.egwwritings.org/applications/create)):
+
+```bash
+CLIENT_ID=your_client_id
+CLIENT_SECRET=your_client_secret
+```
+
+```bash
+npm run corpus:build:egw        # Ellen G. White only (~2 min)
+npm run corpus:build:pioneers   # Pioneer library (~30+ min, optional)
+npm run corpus:gzip             # compress for deploy
 npm run dev
 ```
+
+On first launch the app loads **EGW writings immediately**, then downloads the **pioneer library** in the background (if `pioneers.sqlite.gz` is deployed). Pioneer works are clearly labeled — they are **not** by Ellen G. White.
 
 Open the URL shown (use LAN IP for iPhone on same Wi‑Fi).
 
 ## Deploy (Vercel)
 
-The corpus (~130 MB) is **built during deploy**, not stored in git.
+The corpus is **built during deploy**, not stored in git.
 
 1. Push this repo to GitHub
 2. Import at [vercel.com/new](https://vercel.com/new)
-3. Framework preset: **Vite** (or use included `vercel.json`)
-4. Deploy — first build takes ~3–5 minutes (corpus download + index + gzip)
+3. Add environment variables: `CLIENT_ID`, `CLIENT_SECRET`
+4. Deploy — first build takes ~5–10 minutes (API download + index + gzip)
 
 Or with CLI:
 
@@ -35,14 +49,14 @@ Or with CLI:
 npx vercel --prod
 ```
 
-The deploy bundle ships a **gzip-compressed** corpus (~52 MB). The browser decompresses it on first load.
+The deploy bundle ships a **gzip-compressed** corpus. The browser decompresses it on first load, then everything runs offline.
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Dev server |
-| `npm run corpus:build` | Fetch Archive.org texts → SQLite FTS5 index |
+| `npm run corpus:build` | Fetch EGW Writings API → SQLite FTS5 index |
 | `npm run build` | Production build (requires corpus locally) |
 | `npm run preview` | Preview production build |
 
@@ -52,4 +66,4 @@ Vite · React 19 · TypeScript · Tailwind CSS 4 · sql.js FTS5 · vite-plugin-p
 
 ## License
 
-App code: MIT. Writings are public domain (Ellen G. White / Archive.org sources).
+App code: MIT. Writings are public domain (Ellen G. White / EGW Writings).
