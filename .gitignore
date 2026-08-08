@@ -4,6 +4,8 @@ dist
 *.local
 .env
 .env.*
+# The template carries no secrets and documents required variables.
+!.env.example
 
 # Corpus is built on deploy (~130 MB); manifest.json is committed
 public/corpus/egw.sqlite
