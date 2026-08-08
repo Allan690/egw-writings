@@ -7,7 +7,50 @@ import { compressUsingDict, createCCtx, freeCCtx, init } from '@bokuweb/zstd-was
 export const DICT_TARGET_BYTES = 1024 * 1024
 export const ZSTD_LEVEL = 19
 
-/** Trains a zstd dictionary by shelling out to the zstd CLI (the wasm build has no trainer). */
+const RAW_DICT_FALLBACK_BYTES = 4096
+
+/**
+ * @bokuweb/zstd-wasm's init() is NOT idempotent: every call re-runs
+ * Module.init(), which re-instantiates the wasm module with fresh memory and
+ * detaches the previous heap. Its waitInitialized() then resolves immediately
+ * because the underlying promise settled on the first initialization. Calling
+ * init() a second time therefore corrupts in-flight buffers — compression
+ * silently returns zero-filled frames that only fail later, at decompression,
+ * with zstd error 10 (prefix_unknown).
+ *
+ * Every entry point in this module funnels through this single memoized call.
+ */
+let zstdReady: Promise<void> | null = null
+
+export function ensureZstd(): Promise<void> {
+  if (!zstdReady) zstdReady = init()
+  return zstdReady
+}
+
+/**
+ * Builds a raw content dictionary from the samples themselves. zstd treats a
+ * buffer that lacks the dictionary magic number as raw content, which is valid
+ * input to compress/decompressUsingDict. Used when there are too few samples
+ * to train a real dictionary.
+ */
+function rawContentDictionary(samples: Uint8Array[]): Uint8Array {
+  const out = new Uint8Array(RAW_DICT_FALLBACK_BYTES)
+  let at = 0
+  for (const s of samples) {
+    const take = Math.min(s.length, RAW_DICT_FALLBACK_BYTES - at)
+    out.set(s.subarray(0, take), at)
+    at += take
+    if (at >= RAW_DICT_FALLBACK_BYTES) break
+  }
+  // A short but non-empty dictionary is what matters; pad the remainder.
+  return at === 0 ? new Uint8Array(RAW_DICT_FALLBACK_BYTES) : out
+}
+
+/**
+ * Trains a zstd dictionary by shelling out to the zstd CLI (the wasm build has
+ * no trainer). Falls back to a raw content dictionary when the sample set is
+ * too small to train on — zstd requires roughly a hundred samples.
+ */
 export async function trainDictionary(
   samples: Uint8Array[],
   maxBytes: number = DICT_TARGET_BYTES,
@@ -16,11 +59,15 @@ export async function trainDictionary(
   try {
     samples.forEach((s, i) => writeFileSync(join(dir, `${String(i).padStart(6, '0')}.bin`), s))
     const dictPath = join(dir, 'dictionary')
-    execFileSync(
-      'zstd',
-      ['--train', `${dir}/*.bin`, '-o', dictPath, `--maxdict=${maxBytes}`],
-      { shell: true, stdio: 'pipe' },
-    )
+    try {
+      execFileSync(
+        'zstd',
+        ['--train', `${dir}/*.bin`, '-o', dictPath, `--maxdict=${maxBytes}`],
+        { shell: true, stdio: 'pipe' },
+      )
+    } catch {
+      return rawContentDictionary(samples)
+    }
     return new Uint8Array(readFileSync(dictPath))
   } finally {
     rmSync(dir, { recursive: true, force: true })
@@ -32,7 +79,7 @@ export async function compressChunks(
   dict: Uint8Array,
   level: number = ZSTD_LEVEL,
 ): Promise<Uint8Array[]> {
-  await init()
+  await ensureZstd()
   const cctx = createCCtx()
   try {
     return chunks.map((c) => compressUsingDict(cctx, c, dict, level))
