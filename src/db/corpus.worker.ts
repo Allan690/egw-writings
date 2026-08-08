@@ -9,10 +9,22 @@ import type { BookRow, ChapterRow, ParagraphRow, SearchHit } from './types'
 
 const EGW_DB = '/egw.sqlite'
 const PIONEER_DB = '/pioneers.sqlite'
+
+/**
+ * Where the prebuilt corpora are served from.
+ *
+ * These are build artifacts produced once by `npm run corpus:optimize`, never
+ * rebuilt in CI or on device. pioneers.v5.sqlite is ~198MB, past GitHub's
+ * 100MB per-file limit, so it is hosted outside the repo; set
+ * VITE_CORPUS_BASE_URL to that origin (it must send permissive CORS headers).
+ * Defaults to /corpus for local development, where the files sit in public/.
+ */
+const CORPUS_BASE = (import.meta.env.VITE_CORPUS_BASE_URL ?? '/corpus').replace(/\/$/, '')
+
 // The v5 files are the built artifacts; egw.sqlite / pioneers.sqlite remain the
 // raw API ingest that scripts/optimize-corpus.ts reads from and are not served.
-const EGW_URL = '/corpus/egw.v5.sqlite'
-const PIONEER_URL = '/corpus/pioneers.v5.sqlite'
+const EGW_URL = `${CORPUS_BASE}/egw.v5.sqlite`
+const PIONEER_URL = `${CORPUS_BASE}/pioneers.v5.sqlite`
 
 let egw: CorpusDb | null = null
 let pioneer: CorpusDb | null = null
