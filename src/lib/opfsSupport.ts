@@ -12,7 +12,10 @@ export function isOpfsSupported(): boolean {
   if (typeof navigator === 'undefined') return false
   if (!navigator.storage?.getDirectory) return false
   if (typeof FileSystemFileHandle === 'undefined') return false
-  return typeof FileSystemFileHandle.prototype.createSyncAccessHandle === 'function'
+  // Cast because createSyncAccessHandle is declared in TypeScript's WebWorker
+  // lib, not DOM — the same worker-only scoping this function checks for.
+  const proto = FileSystemFileHandle.prototype as { createSyncAccessHandle?: unknown }
+  return typeof proto.createSyncAccessHandle === 'function'
 }
 
 /**

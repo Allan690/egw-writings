@@ -27,6 +27,13 @@ export default defineConfig({
       crypto: emptyShim,
     },
   },
+  // Pre-bundling breaks sqlite-wasm's resolution of its own .wasm asset.
+  optimizeDeps: {
+    exclude: ['@sqlite.org/sqlite-wasm'],
+  },
+  worker: {
+    format: 'es',
+  },
   plugins: [
     react(),
     tailwindcss(),
