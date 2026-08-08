@@ -134,6 +134,21 @@ export async function addHighlight(
   note = '',
 ): Promise<Highlight> {
   const db = await getUserDb()
+  const existing = await db.getAllFromIndex('highlights', 'by-paragraph', paragraphId)
+  const duplicate = existing.find(
+    (h) => h.startOffset === startOffset && h.endOffset === endOffset,
+  )
+  if (duplicate) {
+    const updated: Highlight = {
+      ...duplicate,
+      color,
+      text,
+      note: note || duplicate.note,
+    }
+    await db.put('highlights', updated)
+    return updated
+  }
+
   const highlight: Highlight = {
     id: crypto.randomUUID(),
     paragraphId,
@@ -149,9 +164,32 @@ export async function addHighlight(
   return highlight
 }
 
+export async function removeHighlightsInRange(
+  paragraphId: number,
+  startOffset: number,
+  endOffset: number,
+): Promise<string[]> {
+  const db = await getUserDb()
+  const existing = await db.getAllFromIndex('highlights', 'by-paragraph', paragraphId)
+  const toRemove = existing.filter(
+    (h) => h.startOffset < endOffset && startOffset < h.endOffset,
+  )
+  for (const h of toRemove) {
+    await db.delete('highlights', h.id)
+  }
+  return toRemove.map((h) => h.id)
+}
+
 export async function removeHighlight(id: string) {
   const db = await getUserDb()
   await db.delete('highlights', id)
+}
+
+export async function updateHighlightNote(id: string, note: string) {
+  const db = await getUserDb()
+  const highlight = await db.get('highlights', id)
+  if (!highlight) return
+  await db.put('highlights', { ...highlight, note })
 }
 
 export async function listHighlights(): Promise<Highlight[]> {

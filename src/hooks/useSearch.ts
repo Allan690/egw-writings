@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { getSearchApi } from '../db/corpus'
+import type { BookCollection } from '../lib/corpusConstants'
 import type { SearchResult } from '../types'
 
 export function useSearch(debounceMs = 120) {
@@ -7,23 +8,30 @@ export function useSearch(debounceMs = 120) {
   const [results, setResults] = useState<SearchResult[]>([])
   const [searching, setSearching] = useState(false)
   const [bookFilter, setBookFilter] = useState<string | undefined>()
+  const [collectionFilter, setCollectionFilter] = useState<BookCollection | 'all'>('all')
+  /** How long the last query took, so the UI can show that search is local. */
+  const [elapsedMs, setElapsedMs] = useState<number | null>(null)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const runSearch = useCallback(
-    async (q: string, bookId?: string) => {
+    async (q: string, bookId?: string, collection: BookCollection | 'all' = 'all') => {
       const trimmed = q.trim()
       if (trimmed.length < 2) {
         setResults([])
         setSearching(false)
+        setElapsedMs(null)
         return
       }
 
       setSearching(true)
+      const startedAt = performance.now()
       try {
-        const hits = await getSearchApi().search(trimmed, 40, bookId)
+        const hits = await getSearchApi().search(trimmed, 40, bookId, collection)
         setResults(hits as SearchResult[])
+        setElapsedMs(performance.now() - startedAt)
       } catch {
         setResults([])
+        setElapsedMs(null)
       } finally {
         setSearching(false)
       }
@@ -34,19 +42,22 @@ export function useSearch(debounceMs = 120) {
   useEffect(() => {
     if (timer.current) clearTimeout(timer.current)
     timer.current = setTimeout(() => {
-      void runSearch(query, bookFilter)
+      void runSearch(query, bookFilter, collectionFilter)
     }, debounceMs)
     return () => {
       if (timer.current) clearTimeout(timer.current)
     }
-  }, [query, bookFilter, debounceMs, runSearch])
+  }, [query, bookFilter, collectionFilter, debounceMs, runSearch])
 
   return {
     query,
     setQuery,
     results,
     searching,
+    elapsedMs,
     bookFilter,
     setBookFilter,
+    collectionFilter,
+    setCollectionFilter,
   }
 }

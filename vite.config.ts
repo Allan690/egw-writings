@@ -27,28 +27,25 @@ export default defineConfig({
       crypto: emptyShim,
     },
   },
+  // Pre-bundling breaks sqlite-wasm's resolution of its own .wasm asset.
+  optimizeDeps: {
+    exclude: ['@sqlite.org/sqlite-wasm'],
+  },
+  worker: {
+    format: 'es',
+  },
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icons/icon.svg', 'corpus/manifest.json'],
+      includeAssets: ['icons/icon.svg', 'corpus/manifest.json', 'corpus/pioneers-manifest.json'],
       workbox: {
+        // .sqlite must stay out of globPatterns — OPFS is the corpus store now,
+        // and precaching ~270MB would defeat the whole migration.
         globPatterns: ['**/*.{js,css,html,ico,svg,wasm,json}'],
-        runtimeCaching: [
-          {
-            urlPattern: /\/corpus\/egw\.sqlite(\.gz)?$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'egw-corpus',
-              expiration: {
-                maxEntries: 1,
-                maxAgeSeconds: 60 * 60 * 24 * 365,
-              },
-              cacheableResponse: { statuses: [0, 200] },
-            },
-          },
-        ],
+        cleanupOutdatedCaches: true,
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
       },
       manifest: {
         name: 'EGW Writings',
