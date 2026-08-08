@@ -20,9 +20,23 @@ function api(): Comlink.Remote<CorpusApi> {
 
 let initPromise: Promise<{ bookCount: number; paragraphCount: number }> | null = null
 
-export function initCorpusEngine() {
-  if (!initPromise) initPromise = api().init()
+export type InstallProgress = (received: number, total: number | null) => void
+
+export function initCorpusEngine(onProgress?: InstallProgress) {
+  if (!initPromise) {
+    // Comlink.proxy is required — a bare callback cannot cross the worker boundary.
+    initPromise = api().init(onProgress ? Comlink.proxy(onProgress) : undefined)
+  }
   return initPromise
+}
+
+/** Whether the EGW corpus is already on disk — decides download vs. open copy. */
+export function egwCorpusInstalled(): Promise<boolean> {
+  return api().egwInstalled()
+}
+
+export async function removePioneerCorpus(): Promise<void> {
+  await api().removePioneers()
 }
 
 export async function searchCorpus(

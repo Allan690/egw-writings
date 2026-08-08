@@ -1,156 +1,253 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { getSearchApi } from './db/corpus'
 import { getReadingPosition } from './db/userStore'
 import { useCorpusInit } from './hooks/useCorpusInit'
 import { usePioneerCorpus } from './hooks/usePioneerCorpus'
 import { useReaderSettings } from './hooks/useReaderSettings'
 import { subscribePioneerLoad } from './db/pioneerLoader'
-import type { BookCollection } from './lib/corpusConstants'
 import { useSearch } from './hooks/useSearch'
-import type { ReaderTarget, SearchResult, View } from './types'
+import { parseSearchTerms } from './lib/searchTerms'
+import type { Book, ReaderTarget, SearchResult, View } from './types'
 import { AppShell } from './components/AppShell'
+import { CommandPalette } from './components/CommandPalette'
 import { LibraryView } from './components/LibraryView'
-import { ReaderView, SavedView } from './components/ReaderView'
+import { ReaderView } from './components/ReaderView'
+import { SavedView } from './components/SavedView'
 import { SearchView } from './components/SearchView'
+import { SettingsSheet } from './components/SettingsSheet'
+import { SetupScreen } from './components/SetupScreen'
 
-function LoadingScreen({ message, error }: { message: string; error?: string | null }) {
-  return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-[var(--bg)] px-6 text-center">
-      <p className="font-serif text-xl font-semibold text-[var(--text)]">EGW Writings</p>
-      <p className="mt-2 max-w-sm text-sm text-[var(--text-3)]">{message}</p>
-      {error && (
-        <pre className="mt-4 max-w-sm overflow-x-auto rounded-lg bg-red-50 p-3 text-left text-xs text-red-800">
-          {error}
-        </pre>
-      )}
-    </div>
-  )
+/** Where a reader session was opened from, so Back can return there. */
+type ReaderOrigin = Exclude<View, 'reader'>
+
+const ORIGIN_LABEL: Record<ReaderOrigin, string> = {
+  library: 'Library',
+  search: 'Results',
+  saved: 'Saved',
 }
 
 export default function App() {
   useReaderSettings()
-  const { ready, error } = useCorpusInit()
-  const pioneer = usePioneerCorpus(ready)
+  const corpus = useCorpusInit()
+  const pioneer = usePioneerCorpus(corpus.ready)
   const search = useSearch()
+
   const [view, setView] = useState<View>('library')
   const [readerTarget, setReaderTarget] = useState<ReaderTarget | null>(null)
-  const [books, setBooks] = useState<
-    { id: string; title: string; code: string; collection: BookCollection; author: string }[]
-  >([])
+  const [readerOrigin, setReaderOrigin] = useState<ReaderOrigin>('library')
+  const [books, setBooks] = useState<Book[]>([])
+  const [paletteOpen, setPaletteOpen] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
+
   const searchInputRef = useRef<HTMLInputElement>(null)
+  /** Window scroll per view, so returning to results lands where you left. */
+  const scrollMemory = useRef<Partial<Record<View, number>>>({})
 
-  const refreshBooks = () => {
-    getSearchApi()
+  const refreshBooks = useCallback(() => {
+    void getSearchApi()
       .getBooks('all')
-      .then((rows) =>
-        setBooks(
-          rows.map((b) => ({
-            id: b.id,
-            title: b.title,
-            code: b.code,
-            collection: b.collection,
-            author: b.author,
-          })),
-        ),
-      )
-  }
+      .then((rows) => setBooks(rows as Book[]))
+  }, [])
 
   useEffect(() => {
-    if (!ready) return
+    if (!corpus.ready) return
     refreshBooks()
-  }, [ready])
+  }, [corpus.ready, refreshBooks])
 
   useEffect(() => {
-    if (!ready) return
+    if (!corpus.ready) return
     return subscribePioneerLoad((s) => {
       if (s.status === 'ready') refreshBooks()
     })
-  }, [ready])
+  }, [corpus.ready, refreshBooks])
+
+  const navigate = useCallback(
+    (next: View) => {
+      setView((current) => {
+        if (current === next) return current
+        if (current !== 'reader') scrollMemory.current[current] = window.scrollY
+        return next
+      })
+      if (next !== 'reader') setReaderTarget(null)
+    },
+    [],
+  )
+
+  // Restore the scroll position of whichever list view we returned to.
+  useEffect(() => {
+    if (view === 'reader') return
+    const y = scrollMemory.current[view] ?? 0
+    requestAnimationFrame(() => window.scrollTo(0, y))
+  }, [view])
+
+  const openReader = useCallback(
+    (target: ReaderTarget, origin: ReaderOrigin) => {
+      if (view !== 'reader') scrollMemory.current[view] = window.scrollY
+      setReaderTarget(target)
+      setReaderOrigin(origin)
+      setView('reader')
+    },
+    [view],
+  )
+
+  const openBook = useCallback(
+    async (bookId: string, origin: ReaderOrigin) => {
+      const position = await getReadingPosition(bookId)
+      openReader(
+        {
+          bookId,
+          chapterNum: position?.chapterNum ?? 1,
+          paragraphId: position?.paragraphId,
+        },
+        origin,
+      )
+    },
+    [openReader],
+  )
+
+  /**
+   * Opening a result keeps the query alive: useSearch state is untouched, so
+   * Back returns to the same list, and the terms travel into the chapter.
+   */
+  const openResult = useCallback(
+    (result: SearchResult) => {
+      openReader(
+        {
+          bookId: result.book_id,
+          chapterNum: result.chapter_num,
+          paragraphId: result.id,
+        },
+        'search',
+      )
+    },
+    [openReader],
+  )
+
+  const runSearch = useCallback(
+    (query: string) => {
+      search.setQuery(query)
+      navigate('search')
+      requestAnimationFrame(() => searchInputRef.current?.focus())
+    },
+    [navigate, search],
+  )
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      const mod = e.metaKey || e.ctrlKey
+      if (mod && e.key.toLowerCase() === 'k') {
         e.preventDefault()
-        setView('search')
-        setReaderTarget(null)
-        setTimeout(() => searchInputRef.current?.focus(), 50)
+        setPaletteOpen((open) => !open)
+      }
+      // "/" is the reading-app convention for search, but not while typing.
+      if (e.key === '/' && !mod) {
+        const el = document.activeElement
+        const typing =
+          el instanceof HTMLInputElement ||
+          el instanceof HTMLTextAreaElement ||
+          (el instanceof HTMLElement && el.isContentEditable)
+        if (!typing) {
+          e.preventDefault()
+          setPaletteOpen(true)
+        }
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  const openReader = (target: ReaderTarget) => {
-    setReaderTarget(target)
-    setView('reader')
-  }
-
-  const openResult = (result: SearchResult) => {
-    openReader({
-      bookId: result.book_id,
-      chapterNum: result.chapter_num,
-      paragraphId: result.id,
-    })
-  }
-
-  const openBook = async (bookId: string) => {
-    const position = await getReadingPosition(bookId)
-    openReader({
-      bookId,
-      chapterNum: position?.chapterNum ?? 1,
-      paragraphId: position?.paragraphId,
-    })
-  }
-
-  if (error) {
-    return <LoadingScreen message="Could not load the writings corpus." error={error} />
-  }
-
-  if (!ready) {
+  if (!corpus.ready) {
     return (
-      <LoadingScreen message="Loading corpus (first visit may take 30–60 seconds)…" />
+      <SetupScreen
+        phase={corpus.phase}
+        received={corpus.received}
+        total={corpus.total}
+        firstRun={corpus.firstRun}
+        error={corpus.error}
+        onRetry={corpus.retry}
+      />
     )
   }
 
+  const searchTerms = readerOrigin === 'search' ? parseSearchTerms(search.query) : []
+
   return (
-    <AppShell
-      view={view}
-      onNavigate={(v) => {
-        setView(v)
-        if (v !== 'reader') setReaderTarget(null)
-      }}
-      hideChrome={view === 'reader'}
-    >
-      {view === 'library' && (
-        <LibraryView
-          onOpenBook={(id) => void openBook(id)}
-          onOpenTarget={openReader}
-        />
-      )}
+    <>
+      <AppShell
+        view={view}
+        onNavigate={navigate}
+        onOpenPalette={() => setPaletteOpen(true)}
+        onOpenSettings={() => setSettingsOpen(true)}
+        hideChrome={view === 'reader'}
+        bookCount={books.length}
+        pioneerStatus={pioneer.status}
+      >
+        {view === 'library' && (
+          <LibraryView
+            books={books}
+            onOpenBook={(id) => void openBook(id, 'library')}
+            onOpenTarget={(target) => openReader(target, 'library')}
+            onOpenPalette={() => setPaletteOpen(true)}
+          />
+        )}
 
-      {view === 'search' && (
-        <SearchView
-          query={search.query}
-          onQueryChange={search.setQuery}
-          results={search.results}
-          searching={search.searching}
-          bookFilter={search.bookFilter}
-          onBookFilterChange={search.setBookFilter}
-          collectionFilter={search.collectionFilter}
-          onCollectionFilterChange={search.setCollectionFilter}
-          pioneerStatus={pioneer.status}
-          pioneerProgress={pioneer.progress}
-          books={books}
-          onOpenResult={openResult}
-          searchInputRef={searchInputRef}
-        />
-      )}
+        {view === 'search' && (
+          <SearchView
+            query={search.query}
+            onQueryChange={search.setQuery}
+            results={search.results}
+            searching={search.searching}
+            elapsedMs={search.elapsedMs}
+            bookFilter={search.bookFilter}
+            onBookFilterChange={search.setBookFilter}
+            collectionFilter={search.collectionFilter}
+            onCollectionFilterChange={search.setCollectionFilter}
+            pioneerStatus={pioneer.status}
+            pioneerProgress={pioneer.progress}
+            books={books}
+            onOpenResult={openResult}
+            searchInputRef={searchInputRef}
+          />
+        )}
 
-      {view === 'bookmarks' && <SavedView onOpen={openReader} />}
+        {view === 'saved' && (
+          <SavedView
+            onOpen={(target) => openReader(target, 'saved')}
+            onOpenSettings={() => setSettingsOpen(true)}
+          />
+        )}
+      </AppShell>
 
       {view === 'reader' && readerTarget && (
-        <ReaderView target={readerTarget} onBack={() => setView('library')} />
+        <ReaderView
+          target={readerTarget}
+          backLabel={ORIGIN_LABEL[readerOrigin]}
+          onBack={() => navigate(readerOrigin)}
+          searchTerms={searchTerms}
+          searchQuery={readerOrigin === 'search' ? search.query : ''}
+          resultCount={readerOrigin === 'search' ? search.results.length : 0}
+          onOpenSettings={() => setSettingsOpen(true)}
+        />
       )}
-    </AppShell>
+
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        books={books}
+        onOpenBook={(id) => void openBook(id, 'library')}
+        onOpenTarget={(target) => openReader(target, 'library')}
+        onSearch={runSearch}
+        onNavigate={navigate}
+        onOpenSettings={() => setSettingsOpen(true)}
+      />
+
+      <SettingsSheet
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        books={books}
+        pioneerStatus={pioneer.status}
+        onCorpusChange={refreshBooks}
+      />
+    </>
   )
 }

@@ -4,19 +4,22 @@ import {
   getChapterParagraphs,
   getChapters,
   getParagraph,
+  egwCorpusInstalled,
   initCorpusEngine,
   isPioneerCorpusReady,
   lookupByReference,
   parseReference,
+  removePioneerCorpus,
   searchCorpus,
+  type InstallProgress,
 } from './searchEngine'
 import type { BookCollection } from '../lib/corpusConstants'
 
 let initPromise: ReturnType<typeof initCorpusEngine> | null = null
 
-export function initCorpus() {
+export function initCorpus(onProgress?: InstallProgress) {
   if (!initPromise) {
-    initPromise = initCorpusEngine().catch((err) => {
+    initPromise = initCorpusEngine(onProgress).catch((err) => {
       initPromise = null
       throw err
     })
@@ -36,6 +39,8 @@ export const searchApi = {
   lookupByReference,
   parseReference,
   isPioneerReady: isPioneerCorpusReady,
+  egwInstalled: egwCorpusInstalled,
+  removePioneers: removePioneerCorpus,
   getContext: async (paragraphId: number, bookId?: string, radius = 2) => {
     const base = await getParagraph(paragraphId, bookId)
     if (!base) return []

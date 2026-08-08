@@ -73,7 +73,7 @@ export interface Highlight {
   createdAt: number
 }
 
-export type View = 'search' | 'library' | 'reader' | 'bookmarks'
+export type View = 'search' | 'library' | 'reader' | 'saved'
 
 export type ReaderTheme = 'light' | 'sepia' | 'dark'
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl'

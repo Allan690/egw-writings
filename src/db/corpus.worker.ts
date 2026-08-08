@@ -1,7 +1,7 @@
 import * as Comlink from 'comlink'
 import { CorpusDb } from './corpusQueries'
 import { installCorpus } from './corpusInstaller'
-import { dbExists } from './opfsPool'
+import { dbExists, removeDb } from './opfsPool'
 import { isOpfsSupported } from '../lib/opfsSupport'
 import { isPioneerBookId, PIONEER_PARAGRAPH_OFFSET } from '../lib/corpusConstants'
 import type { BookCollection } from '../lib/corpusConstants'
@@ -53,13 +53,14 @@ const api = {
     return isOpfsSupported()
   },
 
-  async init() {
+  async init(onProgress?: (received: number, total: number | null) => void) {
     if (!isOpfsSupported()) {
       throw new Error('This browser does not support OPFS storage. Please use a newer browser.')
     }
     if (!egw) {
       if (!(await dbExists(EGW_DB))) {
-        await installCorpus(EGW_URL, EGW_DB)
+        // Only the first visit downloads; onProgress drives the setup screen.
+        await installCorpus(EGW_URL, EGW_DB, onProgress)
       }
       egw = await CorpusDb.open(EGW_DB, 'egw')
     }
@@ -75,6 +76,18 @@ const api = {
 
   isPioneerReady(): boolean {
     return pioneer !== null
+  },
+
+  /** True when the EGW corpus is already on disk, so no download is needed. */
+  async egwInstalled(): Promise<boolean> {
+    return dbExists(EGW_DB)
+  },
+
+  /** Frees the pioneer library from OPFS. EGW writings are untouched. */
+  async removePioneers(): Promise<void> {
+    pioneer?.close()
+    pioneer = null
+    await removeDb(PIONEER_DB)
   },
 
   async installPioneers(onProgress?: (received: number, total: number | null) => void) {

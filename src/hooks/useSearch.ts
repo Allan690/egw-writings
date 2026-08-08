@@ -9,6 +9,8 @@ export function useSearch(debounceMs = 120) {
   const [searching, setSearching] = useState(false)
   const [bookFilter, setBookFilter] = useState<string | undefined>()
   const [collectionFilter, setCollectionFilter] = useState<BookCollection | 'all'>('all')
+  /** How long the last query took, so the UI can show that search is local. */
+  const [elapsedMs, setElapsedMs] = useState<number | null>(null)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const runSearch = useCallback(
@@ -17,15 +19,19 @@ export function useSearch(debounceMs = 120) {
       if (trimmed.length < 2) {
         setResults([])
         setSearching(false)
+        setElapsedMs(null)
         return
       }
 
       setSearching(true)
+      const startedAt = performance.now()
       try {
         const hits = await getSearchApi().search(trimmed, 40, bookId, collection)
         setResults(hits as SearchResult[])
+        setElapsedMs(performance.now() - startedAt)
       } catch {
         setResults([])
+        setElapsedMs(null)
       } finally {
         setSearching(false)
       }
@@ -48,6 +54,7 @@ export function useSearch(debounceMs = 120) {
     setQuery,
     results,
     searching,
+    elapsedMs,
     bookFilter,
     setBookFilter,
     collectionFilter,

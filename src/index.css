@@ -1,69 +1,195 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────────────────
+   EGW Writings — design tokens
+
+   Grounded in the physical object: 1880s Review & Herald cloth
+   boards, laid paper, letterpress ink. Two accents that carry
+   meaning rather than decoration —
+     --accent (bookcloth green) = interactive, you can act on this
+     --cite   (muted brass)     = a location in the corpus
+
+   Typefaces are system stacks on purpose. A local-first app must
+   not block first paint on a font CDN.
+   ───────────────────────────────────────────────────────────── */
+
 @theme {
-  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
 }
 
+:root {
+  /* Type scale — replaces the ad-hoc pixel values scattered through components */
+  --t-micro: 0.6875rem;  /* 11px — rail citations, meta */
+  --t-tiny: 0.75rem;     /* 12px — labels, badges */
+  --t-small: 0.8125rem;  /* 13px — secondary UI */
+  --t-base: 0.875rem;    /* 14px — UI default */
+  --t-lg: 1rem;          /* 16px — inputs (16px avoids iOS zoom-on-focus) */
+  --t-title: 1.375rem;
+  --t-display: 1.75rem;
+  --t-hero: 2.25rem;
+
+  /* Shape */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+
+  /* Motion */
+  --dur-1: 120ms;
+  --dur-2: 180ms;
+  --dur-3: 260ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Reading measure scales with type size so the line length stays
+     ~64 characters at every setting. Previously fixed at 42rem,
+     which swung the measure from ~89 chars at S down to ~64 at XL. */
+  --reader-size: 17px;
+  --reader-measure: 34rem;
+  --reader-leading: 1.75;
+}
+
+[data-font-size="sm"] { --reader-size: 15.5px; --reader-measure: 31rem; }
+[data-font-size="md"] { --reader-size: 17px;   --reader-measure: 34rem; }
+[data-font-size="lg"] { --reader-size: 19px;   --reader-measure: 38rem; }
+[data-font-size="xl"] { --reader-size: 21.5px; --reader-measure: 43rem; }
+
+[data-line-height="normal"]  { --reader-leading: 1.58; }
+[data-line-height="relaxed"] { --reader-leading: 1.75; }
+[data-line-height="loose"]   { --reader-leading: 1.95; }
+
+/* ── Paper (light) ───────────────────────────────────────────── */
 :root,
 [data-theme="light"] {
-  --bg: #faf8f4;
-  --surface: #ffffff;
-  --surface-2: #f5f2eb;
-  --text: #1c1917;
-  --text-2: #57534e;
-  --text-3: #a8a29e;
-  --border: #e7e5e4;
-  --accent: #92400e;
-  --accent-soft: #fef3c7;
-  --mark: #fde68a;
-  --hl-yellow: #fef08a;
-  --hl-amber: #fde68a;
-  --hl-green: #bbf7d0;
-  --hl-blue: #bfdbfe;
-  --hl-pink: #fbcfe8;
+  --bg: #f7f6f2;
+  --surface: #fffefc;
+  --surface-2: #edece5;
+  --surface-3: #e3e1d8;
+  --text: #1a1d1a;
+  --text-2: #4a4e48;
+  --text-3: #7f837a;
+  --border: #dedbd1;
+  --border-strong: #c6c2b5;
+
+  --accent: #2f5d46;
+  --accent-hover: #244937;
+  --accent-soft: #e0e9e3;
+  --accent-contrast: #ffffff;
+
+  --cite: #8a6b2f;
+  --cite-soft: #f0e8d6;
+
+  --ring: #2f5d46;
+  --danger: #9b2c2c;
+  --danger-soft: #fbeaea;
+
+  --mark: #f6e2a8;
+  --hl-yellow: #fbeda4;
+  --hl-amber: #f8dfa0;
+  --hl-green: #c8e6cf;
+  --hl-blue: #c6dcf0;
+  --hl-pink: #f2cfdf;
+
+  --pioneer-bg: #ecebe4;
+  --pioneer-border: #cfccc0;
+  --pioneer-text: #55584f;
+  --pioneer-strong: #33362f;
+
+  --shadow-sheet: 0 -8px 40px rgba(26, 29, 26, 0.14);
+  --shadow-pop: 0 4px 24px rgba(26, 29, 26, 0.12);
+  --scrim: rgba(26, 29, 26, 0.32);
 }
 
+/* ── Dusk (sepia) ────────────────────────────────────────────── */
 [data-theme="sepia"] {
-  --bg: #f4ecd8;
-  --surface: #faf6eb;
-  --surface-2: #ebe3cf;
-  --text: #3d2f1f;
-  --text-2: #5c4a32;
-  --text-3: #8a7355;
-  --border: #d6cbb5;
-  --accent: #78350f;
-  --accent-soft: #f5e6c8;
-  --mark: #e8d5a8;
-  --hl-yellow: #f5e6a8;
-  --hl-amber: #edd48a;
-  --hl-green: #b8e6c8;
-  --hl-blue: #b8d4f0;
-  --hl-pink: #f0c8dc;
+  --bg: #f2e9d8;
+  --surface: #f9f2e3;
+  --surface-2: #e8dec7;
+  --surface-3: #ddd1b6;
+  --text: #33281a;
+  --text-2: #57492f;
+  --text-3: #8a7857;
+  --border: #d5c8ad;
+  --border-strong: #bcab8b;
+
+  --accent: #2c5340;
+  --accent-hover: #21402f;
+  --accent-soft: #dde5da;
+  --accent-contrast: #f9f2e3;
+
+  --cite: #86642a;
+  --cite-soft: #ecdfc2;
+
+  --ring: #2c5340;
+  --danger: #8f2f2a;
+  --danger-soft: #f2e0d8;
+
+  --mark: #e6d29e;
+  --hl-yellow: #f0dfa0;
+  --hl-amber: #e8d190;
+  --hl-green: #c2ddc4;
+  --hl-blue: #c3d5e4;
+  --hl-pink: #e8ccd6;
+
+  --pioneer-bg: #e9dfc8;
+  --pioneer-border: #c9b998;
+  --pioneer-text: #5c4d35;
+  --pioneer-strong: #3b3020;
+
+  --shadow-sheet: 0 -8px 40px rgba(51, 40, 26, 0.18);
+  --shadow-pop: 0 4px 24px rgba(51, 40, 26, 0.14);
+  --scrim: rgba(51, 40, 26, 0.34);
 }
 
+/* ── Night (dark) ────────────────────────────────────────────── */
 [data-theme="dark"] {
-  --bg: #1c1917;
-  --surface: #292524;
-  --surface-2: #44403c;
-  --text: #fafaf9;
-  --text-2: #d6d3d1;
-  --text-3: #a8a29e;
-  --border: #44403c;
-  --accent: #fbbf24;
-  --accent-soft: #422006;
-  --mark: rgba(251, 191, 36, 0.28);
-  --hl-yellow: rgba(250, 204, 21, 0.24);
-  --hl-amber: rgba(251, 191, 36, 0.24);
-  --hl-green: rgba(74, 222, 128, 0.18);
-  --hl-blue: rgba(96, 165, 250, 0.2);
-  --hl-pink: rgba(244, 114, 182, 0.2);
+  --bg: #141715;
+  --surface: #1c201d;
+  --surface-2: #262b27;
+  --surface-3: #333a35;
+  --text: #eceee9;
+  --text-2: #b6bcb4;
+  --text-3: #858c83;
+  --border: #2f352f;
+  --border-strong: #454d46;
+
+  --accent: #7fb79a;
+  --accent-hover: #97c8ad;
+  --accent-soft: #1f2f27;
+  --accent-contrast: #121814;
+
+  --cite: #c9a666;
+  --cite-soft: #2a2418;
+
+  --ring: #7fb79a;
+  --danger: #e08b84;
+  --danger-soft: #2c1c1b;
+
+  --mark: rgba(201, 166, 102, 0.3);
+  --hl-yellow: rgba(214, 189, 106, 0.26);
+  --hl-amber: rgba(201, 166, 102, 0.26);
+  --hl-green: rgba(127, 183, 154, 0.22);
+  --hl-blue: rgba(124, 166, 204, 0.22);
+  --hl-pink: rgba(206, 141, 172, 0.22);
+
+  --pioneer-bg: #232723;
+  --pioneer-border: #3c433d;
+  --pioneer-text: #a8afa6;
+  --pioneer-strong: #dfe3dd;
+
+  --shadow-sheet: 0 -8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-pop: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --scrim: rgba(0, 0, 0, 0.55);
 }
 
 html {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 html,
@@ -76,20 +202,68 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  overscroll-behavior-y: none;
 }
 
 .font-serif {
   font-family: var(--font-serif);
 }
 
-/* Prevent flex layouts from stretching SVGs */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Citations are data. Tabular figures keep the rail aligned. */
+.cite {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--t-micro);
+  letter-spacing: -0.01em;
+  color: var(--cite);
+}
+
 svg {
   display: block;
   flex-shrink: 0;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+/* ── Focus ───────────────────────────────────────────────────── */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* Text fields already show focus through the caret and their own border
+   colour. The generic ring double-draws on top of that and reads as a stray
+   dark box — most obviously around the command palette's auto-focused input. */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+/* ── Reading surface ─────────────────────────────────────────── */
+.reader-measure {
+  max-width: var(--reader-measure);
+}
+
+.reader-text {
+  font-family: var(--font-serif);
+  font-size: var(--reader-size);
+  line-height: var(--reader-leading);
+  color: var(--text);
+  hanging-punctuation: first last;
+  text-wrap: pretty;
 }
 
 mark {
@@ -100,32 +274,29 @@ mark {
   -webkit-box-decoration-break: clone;
 }
 
-.reader-highlight-amber {
-  background: var(--hl-amber);
-}
-
-.reader-highlight-yellow {
-  background: var(--hl-yellow);
-}
-
-.reader-highlight-green {
-  background: var(--hl-green);
-}
-
-.reader-highlight-blue {
-  background: var(--hl-blue);
-}
-
-.reader-highlight-pink {
-  background: var(--hl-pink);
-}
+.reader-highlight-amber { background: var(--hl-amber); }
+.reader-highlight-yellow { background: var(--hl-yellow); }
+.reader-highlight-green { background: var(--hl-green); }
+.reader-highlight-blue { background: var(--hl-blue); }
+.reader-highlight-pink { background: var(--hl-pink); }
 
 [data-theme="dark"] .reader-highlight-amber,
 [data-theme="dark"] .reader-highlight-yellow,
 [data-theme="dark"] .reader-highlight-green,
 [data-theme="dark"] .reader-highlight-blue,
 [data-theme="dark"] .reader-highlight-pink {
-  box-shadow: inset 0 -2px 0 color-mix(in srgb, currentColor 12%, transparent);
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, currentColor 14%, transparent);
+}
+
+/* Applied highlights bloom once so the action reads as landed. */
+@keyframes hl-bloom {
+  0% { background-size: 0% 100%; }
+  100% { background-size: 100% 100%; }
+}
+
+.hl-bloom {
+  animation: hl-bloom var(--dur-3) var(--ease);
+  background-repeat: no-repeat;
 }
 
 .search-snippet {
@@ -137,4 +308,79 @@ mark {
   display: inline;
   max-width: 100%;
   background: var(--mark);
+}
+
+/* Terms carried over from search into the reader — underlined rather
+   than blocked, so the chapter still reads as prose. */
+.reader-term {
+  background: transparent;
+  box-shadow: inset 0 -0.32em 0 var(--mark);
+  border-radius: 0;
+  padding: 0;
+}
+
+/* ── Motion ──────────────────────────────────────────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 6px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes sheet-up {
+  from { transform: translate3d(0, 100%, 0); }
+  to { transform: none; }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.96) translate3d(0, 4px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+.anim-rise { animation: rise var(--dur-3) var(--ease) both; }
+.anim-fade { animation: fade var(--dur-2) var(--ease) both; }
+.anim-pop { animation: pop-in var(--dur-2) var(--ease-spring) both; }
+.anim-sheet { animation: sheet-up var(--dur-3) var(--ease-spring) both; }
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-radius: var(--r-sm);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--surface) 60%, transparent),
+    transparent
+  );
+  animation: shimmer 1.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skeleton::after {
+    display: none;
+  }
 }

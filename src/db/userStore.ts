@@ -185,6 +185,13 @@ export async function removeHighlight(id: string) {
   await db.delete('highlights', id)
 }
 
+export async function updateHighlightNote(id: string, note: string) {
+  const db = await getUserDb()
+  const highlight = await db.get('highlights', id)
+  if (!highlight) return
+  await db.put('highlights', { ...highlight, note })
+}
+
 export async function listHighlights(): Promise<Highlight[]> {
   const db = await getUserDb()
   const all = await db.getAllFromIndex('highlights', 'by-created')
