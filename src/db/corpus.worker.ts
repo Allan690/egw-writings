@@ -9,8 +9,10 @@ import type { BookRow, ChapterRow, ParagraphRow, SearchHit } from './types'
 
 const EGW_DB = '/egw.sqlite'
 const PIONEER_DB = '/pioneers.sqlite'
-const EGW_URL = '/corpus/egw.sqlite'
-const PIONEER_URL = '/corpus/pioneers.sqlite'
+// The v5 files are the built artifacts; egw.sqlite / pioneers.sqlite remain the
+// raw API ingest that scripts/optimize-corpus.ts reads from and are not served.
+const EGW_URL = '/corpus/egw.v5.sqlite'
+const PIONEER_URL = '/corpus/pioneers.v5.sqlite'
 
 let egw: CorpusDb | null = null
 let pioneer: CorpusDb | null = null
