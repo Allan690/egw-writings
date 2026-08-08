@@ -2,30 +2,15 @@ import { execFileSync } from 'node:child_process'
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { compressUsingDict, createCCtx, freeCCtx, init } from '@bokuweb/zstd-wasm'
+import { compressUsingDict, createCCtx, freeCCtx } from '@bokuweb/zstd-wasm'
+import { ensureZstd } from '../../src/lib/zstd'
 
 export const DICT_TARGET_BYTES = 1024 * 1024
 export const ZSTD_LEVEL = 19
 
 const RAW_DICT_FALLBACK_BYTES = 4096
 
-/**
- * @bokuweb/zstd-wasm's init() is NOT idempotent: every call re-runs
- * Module.init(), which re-instantiates the wasm module with fresh memory and
- * detaches the previous heap. Its waitInitialized() then resolves immediately
- * because the underlying promise settled on the first initialization. Calling
- * init() a second time therefore corrupts in-flight buffers — compression
- * silently returns zero-filled frames that only fail later, at decompression,
- * with zstd error 10 (prefix_unknown).
- *
- * Every entry point in this module funnels through this single memoized call.
- */
-let zstdReady: Promise<void> | null = null
-
-export function ensureZstd(): Promise<void> {
-  if (!zstdReady) zstdReady = init()
-  return zstdReady
-}
+export { ensureZstd }
 
 /**
  * Builds a raw content dictionary from the samples themselves. zstd treats a
