@@ -11,6 +11,8 @@
     "corpus:build:pioneer": "npm run corpus:build:pioneers",
     "corpus:build": "tsx scripts/build-corpus.ts && tsx scripts/build-pioneers-corpus.ts && node scripts/gzip-corpus.mjs",
     "corpus:gzip": "node scripts/gzip-corpus.mjs",
+    "corpus:optimize": "tsx scripts/optimize-corpus.ts public/corpus/egw.sqlite public/corpus/egw.v5.sqlite && tsx scripts/optimize-corpus.ts public/corpus/pioneers.sqlite public/corpus/pioneers.v5.sqlite",
+    "corpus:verify": "tsx scripts/verify-corpus.ts",
     "build": "node scripts/patch-sql-wasm.mjs && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",

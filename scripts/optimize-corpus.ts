@@ -1,5 +1,6 @@
 import Database from 'better-sqlite3'
 import { existsSync, unlinkSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import { createCorpusSchemaV5 } from './corpus-schema'
 import { compressChunks, trainDictionary } from './lib/zstdDict'
 import { deriveTemplate } from '../src/lib/referenceCodec'
@@ -46,17 +47,24 @@ export async function optimizeCorpus(srcPath: string, outPath: string): Promise<
   )
   out.transaction(() => chapters.forEach((c) => insChapter.run(c)))()
 
+  const step = (msg: string) => console.error(`[optimize] ${msg}`)
+
+  step(`loading paragraphs from ${srcPath}`)
   const paragraphs = src
     .prepare(
       `SELECT id, book_id, chapter_id, chapter_num, page_num, para_num, puborder, reference, text
        FROM paragraphs ORDER BY id`,
     )
     .all() as SrcParagraph[]
+  step(`loaded ${paragraphs.length} paragraphs`)
 
   // 1. Chunk and compress the text.
   const { chunks, slices } = planChunks(paragraphs.map((p) => p.text))
+  step(`planned ${chunks.length} chunks`)
   const dict = await trainDictionary(chunks)
+  step(`trained dictionary: ${(dict.length / 1024).toFixed(0)}KB`)
   const compressed = await compressChunks(chunks, dict)
+  step(`compressed ${compressed.length} chunks`)
 
   const insChunk = out.prepare('INSERT INTO text_chunks (id, data) VALUES (?, ?)')
   out.transaction(() => compressed.forEach((c, i) => insChunk.run(i, Buffer.from(c))))()
@@ -114,9 +122,11 @@ export async function optimizeCorpus(srcPath: string, outPath: string): Promise<
   })()
 
   // 3. Build the contentless FTS index from the source text.
+  step('building FTS index')
   const insFts = out.prepare('INSERT INTO paragraphs_fts(rowid, text) VALUES (?, ?)')
   out.transaction(() => paragraphs.forEach((p) => insFts.run(p.id, p.text)))()
 
+  step('analyzing and vacuuming')
   out.exec('ANALYZE; VACUUM;')
 
   const stats: OptimizeStats = {
@@ -130,4 +140,17 @@ export async function optimizeCorpus(srcPath: string, outPath: string): Promise<
   src.close()
   out.close()
   return stats
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  const [, , src, out] = process.argv
+  if (!src || !out) {
+    console.error('usage: tsx scripts/optimize-corpus.ts <src.sqlite> <out.sqlite>')
+    process.exit(1)
+  }
+  const s = await optimizeCorpus(src, out)
+  console.log(
+    `${src}: paragraphs=${s.paragraphs} chunks=${s.chunks} templates=${s.templates} ` +
+      `exceptions=${s.exceptions} dict=${(s.dictBytes / 1024).toFixed(0)}KB`,
+  )
 }

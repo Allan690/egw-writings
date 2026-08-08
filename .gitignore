@@ -8,6 +8,10 @@ dist
 # Corpus is built on deploy (~130 MB); manifest.json is committed
 public/corpus/egw.sqlite
 public/corpus/egw.sqlite.gz
+public/corpus/pioneers.sqlite
+public/corpus/pioneers.sqlite.gz
+public/corpus/egw.v5.sqlite
+public/corpus/pioneers.v5.sqlite
 
 # Generated at install/dev
 src/vendor/sql-wasm.mjs
@@ -16,3 +20,5 @@ src/vendor/sql-wasm.mjs
 .cursor
 .vscode
 *.log
+.vercel
+tmp/
