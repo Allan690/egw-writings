@@ -9,13 +9,25 @@ export { isPioneerBookId, PIONEER_PARAGRAPH_OFFSET }
 export type { BookCollection }
 
 let remote: Comlink.Remote<CorpusApi> | null = null
+let workerRef: Worker | null = null
 
 function api(): Comlink.Remote<CorpusApi> {
   if (!remote) {
-    const worker = new Worker(new URL('./corpus.worker.ts', import.meta.url), { type: 'module' })
-    remote = Comlink.wrap<CorpusApi>(worker)
+    workerRef = new Worker(new URL('./corpus.worker.ts', import.meta.url), { type: 'module' })
+    remote = Comlink.wrap<CorpusApi>(workerRef)
   }
   return remote
+}
+
+// Without this, every HMR update leaves the previous worker alive holding the
+// OPFS sync access handles, and the replacement fails to acquire them.
+if (import.meta.hot) {
+  import.meta.hot.dispose(() => {
+    workerRef?.terminate()
+    workerRef = null
+    remote = null
+    initPromise = null
+  })
 }
 
 let initPromise: Promise<{ bookCount: number; paragraphCount: number }> | null = null

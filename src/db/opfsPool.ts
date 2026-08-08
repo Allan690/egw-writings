@@ -12,24 +12,58 @@ type Database = InstanceType<SAHPoolUtil['OpfsSAHPoolDb']>
 
 let poolPromise: Promise<SAHPoolUtil> | null = null
 
+const ACQUIRE_ATTEMPTS = 5
+const ACQUIRE_BACKOFF_MS = 250
+
+function isHandleConflict(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err)
+  return /Access Handle|NoModificationAllowedError|already open/i.test(msg)
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms))
+
 /**
  * Installs the OPFS SAHPool VFS. Memoized: installing twice races, and the
- * pool holds exclusive sync access handles.
+ * pool holds exclusive sync access handles on every slot it owns.
  *
  * SAHPool specifically (not the plain "opfs" VFS) because it needs no
  * SharedArrayBuffer, and therefore no COOP/COEP headers on the deployment.
  * Worker-only — createSyncAccessHandle does not exist on the main thread.
+ *
+ * Acquisition is retried because a replaced worker releases its handles
+ * asynchronously: during Vite HMR, and briefly after a tab closes, the old
+ * pool can still hold them. A conflict that outlives the retries means
+ * another tab genuinely owns the corpus, which is reported as such.
  */
 export function getPool(): Promise<SAHPoolUtil> {
   if (!poolPromise) {
     poolPromise = (async () => {
       const sqlite3 = await sqlite3InitModule()
-      return sqlite3.installOpfsSAHPoolVfs({
-        name: POOL_NAME,
-        // One slot per file: EGW + Pioneers + headroom for replacement.
-        initialCapacity: 8,
-      })
-    })()
+      let lastErr: unknown
+      for (let attempt = 0; attempt < ACQUIRE_ATTEMPTS; attempt++) {
+        try {
+          return await sqlite3.installOpfsSAHPoolVfs({
+            name: POOL_NAME,
+            // One slot per file: EGW + Pioneers + headroom for replacement.
+            initialCapacity: 8,
+          })
+        } catch (err) {
+          lastErr = err
+          if (!isHandleConflict(err)) throw err
+          await sleep(ACQUIRE_BACKOFF_MS * (attempt + 1))
+        }
+      }
+      throw new Error(
+        'The corpus is open in another tab. Close the other tab and reload — ' +
+          'offline storage can only be used by one tab at a time.',
+        { cause: lastErr },
+      )
+    })().catch((err) => {
+      // Never cache a rejection: a retry after the conflict clears must be
+      // able to succeed rather than replaying the original failure forever.
+      poolPromise = null
+      throw err
+    })
   }
   return poolPromise
 }
