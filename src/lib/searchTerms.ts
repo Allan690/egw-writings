@@ -6,38 +6,12 @@
  * an FTS5 query into plain terms and locate them in paragraph text.
  */
 
-const FTS_OPERATORS = new Set(['and', 'or', 'not', 'near'])
-
-/** Words too common to be worth marking up in a chapter of prose. */
-const STOP_WORDS = new Set([
-  'the', 'a', 'an', 'of', 'to', 'in', 'is', 'it', 'and', 'or', 'be', 'as',
-  'at', 'by', 'for', 'on', 'that', 'this', 'with', 'was', 'are', 'from',
-])
+import { buildSearchPlan } from './searchPlan'
 
 export function parseSearchTerms(query: string): string[] {
-  const terms: string[] = []
-
-  // Quoted phrases first, so "righteousness by faith" stays intact.
-  const phrases = query.match(/"([^"]+)"/g) ?? []
-  for (const raw of phrases) {
-    const phrase = raw.slice(1, -1).trim()
-    if (phrase.length >= 2) terms.push(phrase)
-  }
-
-  const rest = query.replace(/"[^"]*"/g, ' ')
-  for (const token of rest.split(/[^\p{L}\p{N}'-]+/u)) {
-    const word = token.trim()
-    if (word.length < 3) continue
-    const lower = word.toLowerCase()
-    if (FTS_OPERATORS.has(lower) || STOP_WORDS.has(lower)) continue
-    // Trailing * is an FTS prefix operator, not part of the word.
-    terms.push(word.replace(/\*+$/, ''))
-  }
-
-  // Longest first so a phrase wins over its own constituent words.
-  return Array.from(new Set(terms.map((t) => t.toLowerCase()))).sort(
-    (a, b) => b.length - a.length,
-  )
+  const plan = buildSearchPlan(query)
+  return [...new Set([...plan.phrases, ...plan.terms].map(t => t.toLowerCase()))]
+    .sort((a, b) => b.length - a.length)
 }
 
 export interface TermRange {
@@ -60,7 +34,7 @@ export function findTermRanges(text: string, terms: string[]): TermRange[] {
   const found: TermRange[] = []
   for (const term of terms) {
     if (!term) continue
-    const pattern = new RegExp(`\\b${escapeRegExp(term)}`, 'giu')
+    const pattern = new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(term).replace(/['’]/g, "['’]")}`, 'giu')
     for (const match of text.matchAll(pattern)) {
       const start = match.index
       if (start === undefined) continue

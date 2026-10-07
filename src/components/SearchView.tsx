@@ -199,7 +199,7 @@ export function SearchView({
           <span className="font-medium text-[var(--text-2)]">
             {searching
               ? 'Searching…'
-              : `${formatCount(displayResults.length)} ${
+              : `Top ${formatCount(displayResults.length)} ${
                   displayResults.length === 1 ? 'passage' : 'passages'
                 }`}
           </span>

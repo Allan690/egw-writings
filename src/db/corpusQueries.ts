@@ -158,7 +158,7 @@ export class CorpusDb {
        JOIN chapters c ON p.chapter_id = c.id
        ${PARA_JOINS}
        WHERE paragraphs_fts MATCH ? ${filter}
-       ORDER BY rank LIMIT ?`,
+       ORDER BY rank, p.id LIMIT ?`,
       params,
     ).map((r) => {
       const para = this.toParagraph(r)
@@ -173,6 +173,16 @@ export class CorpusDb {
         rank: Number(r.rank),
       }
     })
+  }
+
+  referenceHit(ref: string, parsed: ParsedReference): SearchHit | null {
+    const para = this.lookup(ref, parsed)
+    if (!para) return null
+    const book = this.book(para.book_id)!
+    const chapter = this.chapters(para.book_id).find(c => c.number === para.chapter_num)
+    return { ...para, book_title: book.title, book_code: book.code,
+      book_author: book.author, collection: book.collection,
+      chapter_title: chapter?.title ?? '', snippet: makeSnippet(para.text, ''), rank: 0 }
   }
 
   lookup(ref: string, parsed: ParsedReference | null): ParagraphRow | null {

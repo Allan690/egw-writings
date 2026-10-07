@@ -11,10 +11,11 @@ export function useSearch(debounceMs = 120) {
   const [collectionFilter, setCollectionFilter] = useState<BookCollection | 'all'>('all')
   /** How long the last query took, so the UI can show that search is local. */
   const [elapsedMs, setElapsedMs] = useState<number | null>(null)
+  const generation = useRef(0)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const runSearch = useCallback(
-    async (q: string, bookId?: string, collection: BookCollection | 'all' = 'all') => {
+    async (q: string, bookId?: string, collection: BookCollection | 'all' = 'all', request = generation.current) => {
       const trimmed = q.trim()
       if (trimmed.length < 2) {
         setResults([])
@@ -27,24 +28,29 @@ export function useSearch(debounceMs = 120) {
       const startedAt = performance.now()
       try {
         const hits = await getSearchApi().search(trimmed, 40, bookId, collection)
+        if (request !== generation.current) return
         setResults(hits as SearchResult[])
         setElapsedMs(performance.now() - startedAt)
       } catch {
+        if (request !== generation.current) return
         setResults([])
         setElapsedMs(null)
       } finally {
-        setSearching(false)
+        if (request === generation.current) setSearching(false)
       }
     },
     [],
   )
 
   useEffect(() => {
+    const request = ++generation.current
     if (timer.current) clearTimeout(timer.current)
     timer.current = setTimeout(() => {
-      void runSearch(query, bookFilter, collectionFilter)
+      void runSearch(query, bookFilter, collectionFilter, request)
     }, debounceMs)
+    const invalidate = () => { generation.current++ }
     return () => {
+      invalidate()
       if (timer.current) clearTimeout(timer.current)
     }
   }, [query, bookFilter, collectionFilter, debounceMs, runSearch])

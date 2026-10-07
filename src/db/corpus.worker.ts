@@ -1,4 +1,6 @@
 import * as Comlink from 'comlink'
+import { buildSearchPlan } from '../lib/searchPlan'
+import { fuseSearchResults } from '../lib/searchRanking'
 import { CorpusDb } from './corpusQueries'
 import { installCorpus } from './corpusInstaller'
 import { dbExists, removeDb } from './opfsPool'
@@ -28,18 +30,6 @@ const PIONEER_URL = `${CORPUS_BASE}/pioneers.v5.sqlite`
 
 let egw: CorpusDb | null = null
 let pioneer: CorpusDb | null = null
-
-function buildFtsQuery(raw: string): string {
-  const trimmed = raw.trim()
-  if (!trimmed) return ''
-  if (trimmed.startsWith('"') && trimmed.endsWith('"')) return trimmed
-  const terms = trimmed
-    .split(/\s+/)
-    .map((t) => t.replace(/[^\w'-]/g, ''))
-    .filter(Boolean)
-  if (terms.length === 0) return ''
-  return terms.map((t) => `"${t}"*`).join(' AND ')
-}
 
 function parseReference(input: string) {
   const match = input.trim().match(/^([A-Za-z]{1,5}\d?[A-Za-z]?)\s*(\d+)\.(\d+)\.?$/)
@@ -116,19 +106,23 @@ const api = {
     bookId?: string,
     collection?: BookCollection | 'all',
   ): Promise<SearchHit[]> {
-    const fts = buildFtsQuery(query)
-    if (!fts || !egw) return []
-
-    const hits: SearchHit[] = []
-    const wantEgw = collection !== 'pioneer' && (!bookId || !isPioneerBookId(bookId))
-    const wantPioneer =
-      collection !== 'egw' && pioneer !== null && (!bookId || isPioneerBookId(bookId))
-
-    if (wantEgw) hits.push(...egw.search(fts, query, limit, bookId))
-    if (wantPioneer) hits.push(...pioneer!.search(fts, query, limit, bookId))
-
-    hits.sort((a, b) => a.rank - b.rank)
-    return hits.slice(0, limit)
+    if (!egw || limit <= 0) return []
+    const plan = buildSearchPlan(query)
+    const databases: CorpusDb[] = []
+    if (collection !== 'pioneer' && (!bookId || !isPioneerBookId(bookId))) databases.push(egw)
+    if (collection !== 'egw' && pioneer && (!bookId || isPioneerBookId(bookId))) databases.push(pioneer)
+    const parsed = parseReference(plan.normalized)
+    if (parsed) {
+      return databases.flatMap(db => {
+        const hit = db.referenceHit(plan.normalized, parsed)
+        return hit && (!bookId || hit.book_id === bookId) ? [hit] : []
+      }).slice(0, limit)
+    }
+    const candidateLimit = Math.min(200, Math.max(limit * 3, 100))
+    const lists = databases.flatMap(db => plan.lanes.map(lane => ({
+      hits: db.search(lane.query, query, candidateLimit, bookId), weight: lane.weight,
+    })))
+    return fuseSearchResults(lists, plan, limit)
   },
 
   async getBooks(collection?: BookCollection | 'all'): Promise<BookRow[]> {
