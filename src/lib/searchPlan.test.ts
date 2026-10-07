@@ -74,3 +74,33 @@ describe('rank fusion', () => {
     expect(fuseSearchResults([{ hits: [b, a], weight: 1 }, { hits: [a], weight: 1 }], buildSearchPlan('faith'), 1)[0]?.id).toBe(1)
   })
 })
+
+
+describe('review regressions', () => {
+  it('removes Ellen White pronouns only from recognized framing', () => {
+    for (const query of ['what does she say about angels', 'where did she write on angels',
+      'does she teach that angels', 'what does Ellen White say about angels']) {
+      expect(buildSearchPlan(query).terms).toEqual(['angels'])
+      expect(retrieve(query)[0]?.id).toBe(3)
+    }
+    expect(buildSearchPlan('she loved angels').terms).toContain('she')
+    expect(buildSearchPlan('"what does she say about angels"').phrases).toEqual(['what does she say about angels'])
+  })
+  it('preserves ordered stop words and repeated words in the phrase lane', () => {
+    expect(buildSearchPlan('righteousness by faith').lanes[0]?.query).toBe('"righteousness by faith"')
+    expect(buildSearchPlan('faith faith').lanes[0]?.query).toBe('"faith faith"')
+    expect(buildSearchPlan('my blood my blood').lanes[0]?.query).toBe('"my blood my blood"')
+    expect(retrieve('righteousness by faith')[0]?.id).toBe(1)
+    expect(buildSearchPlan('what does she say about righteousness by faith').lanes[0]?.query)
+      .toBe('"righteousness by faith"')
+  })
+  it('strips recognized framing while preserving advanced operators and quoted words', () => {
+    expect(buildSearchPlan('What does Ellen White say about faith AND works').lanes)
+      .toEqual([{ query: 'faith AND works', weight: 1 }])
+    expect(retrieve('What does Ellen White say about faith AND works').map(h => h.id)).toEqual([2])
+    expect(buildSearchPlan('what does she say about faith NOT works').lanes[0]?.query).toBe('faith NOT works')
+    expect(retrieve('what does she say about faith NOT works').some(h => h.id === 2)).toBe(false)
+    expect(buildSearchPlan('What does Ellen White say about Christ AND "righteousness by faith"').lanes[0]?.query)
+      .toBe('Christ AND "righteousness by faith"')
+  })
+})

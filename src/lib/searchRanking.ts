@@ -24,7 +24,7 @@ export function fuseSearchResults(
     // Small bounded bonuses preserve the retrieval evidence (including stemming).
     const close = positions.some((p, i) => positions.slice(i + 1).some(next =>
       next.term !== p.term && next.start - p.end < 80))
-    const phrase = plan.terms.length > 1 && findTermRanges(hit.text, [plan.terms.join(' ')]).length > 0
+    const phrase = plan.terms.length > 1 && findTermRanges(hit.text, [plan.orderedPhrase]).length > 0
     return { hit, score: score + coverage * 0.025 + (close ? 0.005 : 0) + (phrase ? 0.02 : 0) }
   })
   ranked.sort((a, b) => b.score - a.score || a.hit.collection.localeCompare(b.hit.collection) || a.hit.id - b.hit.id)
