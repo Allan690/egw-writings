@@ -55,3 +55,19 @@ describe('makeSnippet', () => {
     expect(out).toContain('<mark>God’s</mark>')
   })
 })
+
+it('chooses the window covering more unique meaningful terms', () => {
+  const text = `God ${'padding '.repeat(60)}God gives human freedom and love.`
+  const out = makeSnippet(text, 'God and human freedom', { context: 35 })
+  expect(out).toContain('<mark>human</mark>')
+  expect(out).toContain('<mark>freedom</mark>')
+  expect(out).not.toContain('<mark>and</mark>')
+})
+
+it('matches copied apostrophes without changing original text', () => {
+  expect(makeSnippet('God’s love', "God's love")).toContain('<mark>God’s</mark>')
+})
+
+it('does not highlight a term inside another word', () => {
+  expect(makeSnippet('business and sin', 'sin')).toBe('business and <mark>sin</mark>')
+})
